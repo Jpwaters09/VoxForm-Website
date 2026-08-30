@@ -61,7 +61,7 @@ function sendDiscordNotification($order_id, $pdo) {
     $webhookurl1 = $_ENV['DISCORD_NOTIFICATIONS_WEBHOOK'];
 
     $payload1 = json_encode([
-        'content' => "Order #{$order_id} Complete to: <#{$threadId}>"
+        'content' => "Order #{$order_id} Complete: <#{$threadId}>"
     ]);
     
     $ch1 = curl_init($webhookurl1);

@@ -47,7 +47,7 @@ function sendDiscordNotification($order_id, $price, $pdo) {
     $threadId = $stmt->fetchColumn();
 
     $payload = json_encode([
-        'content' => "Order Quoted £{$price}"
+        'content' => "Order Quoted - £{$price}"
     ]);
 
     $ch = curl_init($webhookurl . '?thread_id=' . $threadId);
@@ -65,7 +65,7 @@ function sendDiscordNotification($order_id, $price, $pdo) {
     $webhookurl1 = $_ENV['DISCORD_NOTIFICATIONS_WEBHOOK'];
 
     $payload1 = json_encode([
-        'content' => "Order #{$order_id} Quoted - {$totalPrice}: <#{$threadId}>"
+        'content' => "Order #{$order_id} Quoted - {$price}: <#{$threadId}>"
     ]);
     
     $ch1 = curl_init($webhookurl1);
