@@ -14,20 +14,13 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-dev --optimize-autoloader
 
-      - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via rsync/SSH
+        uses: easingthemes/ssh-deploy@v6.0.1
         with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: ${{ secrets.SFTP_PORT }}
-          protocol: sftp
-          local-dir: ./
-          server-dir: /public/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.env
-            **.env.example
-            **/node_modules/**
-            **/tests/**
+          SSH_PRIVATE_KEY: ${{ secrets.SFTP_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.SFTP_HOST }}
+          REMOTE_USER: ${{ secrets.SFTP_USERNAME }}
+          REMOTE_PORT: ${{ secrets.SFTP_PORT }}
+          SOURCE: "./"
+          TARGET: "/home/www/public"
+          EXCLUDE: "/.git/, /.github/, .env, .env.example, README.md, LICENCE, composer.json, composer.lock, .gitignore, /vendor/"
