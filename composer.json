@@ -2,7 +2,7 @@
     "name": "voxform/website",
     "description": "VoxForm Website",
     "type": "project",
-    "license": "GPL-3.0-only",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jacob Waters"
