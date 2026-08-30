@@ -1,21 +1,21 @@
 <?php
+
 require '/home/www/vendor/autoload.php';
-require '/home/www/public/scripts/PHPMailer.php';
-require '/home/www/public/scripts/SMTP.php';
-require '/home/www/public/scripts/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable('/home/www/public/');
 $dotenv->load();
 
-\Stripe\Stripe::setApiKey($_ENV['STRIPE_MAIN_API']); // Main Mode
-// \Stripe\Stripe::setApiKey($_ENV['STRIPE_TEST_API']); // Test Mode
+// \Stripe\Stripe::setApiKey($_ENV['STRIPE_MAIN_API']); // Main Mode
+\Stripe\Stripe::setApiKey($_ENV['STRIPE_TEST_API']); // Test Mode
 
 $payload = file_get_contents('php://input');
 $sig = $_SERVER['HTTP_STRIPE_SIGNATURE'] ?? '';
-$secret = $_ENV['STRIPE_MAIN_SECRET']; // Main Mode
-// $secret = $_ENV['STRIPE_TEST_SECRET']; // Test Mode
+// $secret = $_ENV['STRIPE_MAIN_SECRET']; // Main Mode
+$secret = $_ENV['STRIPE_TEST_SECRET']; // Test Mode
 
 $host = $_ENV['DB_HOST'];
 $db = $_ENV['DB'];

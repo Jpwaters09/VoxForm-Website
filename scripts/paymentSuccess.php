@@ -1,7 +1,10 @@
 <?php
+
+require '/home/www/vendor/autoload.php';
+
 header('Content-Type: application/json');
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable('/home/www/public/');
 $dotenv->load();
 
 $host = $_ENV['DB_HOST'];

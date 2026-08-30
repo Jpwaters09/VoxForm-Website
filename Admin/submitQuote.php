@@ -1,15 +1,15 @@
 <?php
 session_start();
-header('Content-Type: application/json');
 
 require '/home/www/vendor/autoload.php';
-require '/home/www/public/scripts/PHPMailer.php';
-require '/home/www/public/scripts/SMTP.php';
-require '/home/www/public/scripts/Exception.php';
+
+header('Content-Type: application/json');
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable('/home/www/public/');
 $dotenv->load();
 
 if (!isset($_SESSION['username'])) {
