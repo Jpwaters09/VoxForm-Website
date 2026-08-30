@@ -1,6 +1,10 @@
 Options -Indexes
 RewriteEngine On
 
+<Files ".env">
+    Require all denied
+</Files>
+
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://voxform.co.uk%{REQUEST_URI} [R=301,L]
