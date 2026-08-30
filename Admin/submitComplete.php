@@ -43,7 +43,7 @@ function sendDiscordNotification($order_id, $pdo) {
     $threadId = $stmt->fetchColumn();
 
     $payload = json_encode([
-        'content' => "Order Delivered"
+        'content' => "Order Complete"
     ]);
 
     $ch = curl_init($webhookurl . '?thread_id=' . $threadId);
@@ -57,6 +57,24 @@ function sendDiscordNotification($order_id, $pdo) {
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
     curl_close($ch);
+
+    $webhookurl1 = $_ENV['DISCORD_NOTIFICATIONS_WEBHOOK'];
+
+    $payload1 = json_encode([
+        'content' => "Order #{$order_id} Complete to: <#{$threadId}>"
+    ]);
+    
+    $ch1 = curl_init($webhookurl1);
+
+    curl_setopt($ch1, CURLOPT_POST, true);
+    curl_setopt($ch1, CURLOPT_POSTFIELDS, $payload1);
+    curl_setopt($ch1, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+
+    $response1 = curl_exec($ch1);
+    $httpCode1 = curl_getinfo($ch1, CURLINFO_HTTP_CODE);
+
+    curl_close($ch1);
 }
 
 sendDiscordNotification($orderId, $pdo);
