@@ -439,7 +439,7 @@ $mail2->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail2->Port = 465;
 
 $mail2->setFrom($_ENV['EMAIL_USERNAME_NOREPLY'], 'VoxForm No-Reply');
-$mail2->addAddress($order['email']);
+$mail2->addAddress($_POST['email']);
 $mail2->addReplyTo($_ENV['EMAIL_USERNAME_CONTACT']);
 
 $html = file_get_contents('/home/www/public/Email Templates/submitOrder.html');
