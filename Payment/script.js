@@ -1,5 +1,5 @@
-// const stripe = Stripe('pk_live_51TQXjvHtkpOTBmmygxq730yGu2KqtjVAwr0T76obUBhl5XJ7pZFq7yAXp2z1LDkTFlqKwyqyPNrGStGp2sT72MiA00g0U4XwdP'); // Main Mode
-const stripe = Stripe('pk_test_51TQXjvHtkpOTBmmyR8Y1WKWQ8aC1m8VizCyqgpj0CbIYLc2C9s0G9bYuiMxCQNendI0NHDT9jFr0JuNAIazwv52M00Ai9WGp2X'); // Test Mode
+const stripe = Stripe('pk_live_51TQXjvHtkpOTBmmygxq730yGu2KqtjVAwr0T76obUBhl5XJ7pZFq7yAXp2z1LDkTFlqKwyqyPNrGStGp2sT72MiA00g0U4XwdP'); // Main Mode
+// const stripe = Stripe('pk_test_51TQXjvHtkpOTBmmyR8Y1WKWQ8aC1m8VizCyqgpj0CbIYLc2C9s0G9bYuiMxCQNendI0NHDT9jFr0JuNAIazwv52M00Ai9WGp2X'); // Test Mode
 let clientSecret;
 let orderID;
 let email;

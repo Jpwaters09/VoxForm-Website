@@ -31,8 +31,8 @@ if (!$order) {
     exit;
 }
 
-// \Stripe\Stripe::setApiKey($_ENV['STRIPE_MAIN_API']); // Main Mode
-\Stripe\Stripe::setApiKey($_ENV['STRIPE_TEST_API']); // Test Mode
+\Stripe\Stripe::setApiKey($_ENV['STRIPE_MAIN_API']); // Main Mode
+// \Stripe\Stripe::setApiKey($_ENV['STRIPE_TEST_API']); // Test Mode
 
 $existing = \Stripe\Customer::search(['query' => "email:'$email'"]);
 
