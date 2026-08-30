@@ -22,3 +22,6 @@ Thumbs.db
 
 # Config Overrides
 config.local.php
+
+# htaccess
+.htaccess

@@ -14,8 +14,8 @@ RewriteCond %{REQUEST_URI} !^/Maintenance/
 RewriteCond %{REQUEST_URI} !^/Header/
 RewriteCond %{REQUEST_URI} !^/Footer/
 RewriteCond %{REQUEST_URI} !^/webhook\.php$
-RewriteCond %{REMOTE_ADDR} !^86\.144\.194\.181$
-RewriteCond %{REMOTE_ADDR} !^2a00:23c5:c573:6601
+RewriteCond %{REMOTE_ADDR} !^XXX\.XXX\.XXX\.XXX$
+RewriteCond %{REMOTE_ADDR} !^XXXX:XXXX:XXXX:XXXX
 RewriteRule ^ - [R=503,L]
 
 Header always set Retry-After "3600" env=REDIRECT_STATUS
