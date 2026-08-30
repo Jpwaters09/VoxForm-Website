@@ -29,7 +29,7 @@ function sendDiscordNotification($order_id, $pdo) {
     $stmt->execute([$order_id]);
     $order = $stmt->fetch(PDO::FETCH_ASSOC);
     $threadId = $order['discord_thread_id'];
-    $totalCost = $order['total_cost'];
+    $totalCost = $order['total_price'];
 
     $payload = json_encode([
         'content' => "Order Paid - £{$totalCost}"
@@ -94,7 +94,7 @@ if ($event->type === 'payment_intent.succeeded') {
         exit;
     }
 
-    sendDiscordNotification($order['id'], $pdo);
+    sendDiscordNotification($order['order_id'], $pdo);
 
     $shipping = $order['shipping'];
 
