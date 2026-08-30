@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Payment/styles.css">
+        <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
+        <script src="https://js.stripe.com/dahlia/stripe.js"></script>
+        <script src="/Payment/script.js"></script>
+        <meta name="robots" content="noindex"/>
+        <link rel="stylesheet" href="/Header/styles.css">
+        <link rel="stylesheet" href="/Footer/styles.css">
+        <script src="/Header/script.js" defer></script>
+        <meta property="og:title" content="Payment | VoxForm">
+        <meta property="og:description" content="Pay for you order.">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:url" content="https://voxform.co.uk/Payment/">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <title>Payment | VoxForm</title>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div id="content">
+            <span id="heading">Payment</span>
+
+            <div id="payCard">
+                <div id="itemDiv"><span id="item"></span><span id="itemPrice"></span></div>
+                <div id="shippingDiv"><span id="shippingHeading">Shipping</span><span id="shippingPrice">£0.00</span></div>
+
+                <div id="totalDiv"><span id="totalHeading">Total</span><span id="total">£0.00</span></div>
+
+                <div id="cardElement"></div>
+                
+                <button id="payNow" onclick="payNow()">Pay £0.00</button>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 769px) {
+    #productsCard {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #productsCard {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#heading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#subheading {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 1500px;
+}
+
+#productsCard div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#productsCard div:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#productsCard img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+}
+
+.productName {
+    font-size: 24px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.productPrice {
+    font-size: 18px;
+    color: var(--text-secondary);
+    cursor: pointer;
+}

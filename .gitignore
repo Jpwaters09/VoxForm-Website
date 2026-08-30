@@ -1,0 +1,24 @@
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor/
+composer.phar
+
+# Logs
+*.log
+/logs/
+
+# OS/editor Cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Uploads
+/Uploads/
+
+# Config Overrides
+config.local.php

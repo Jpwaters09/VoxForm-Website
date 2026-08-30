@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+ 
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark light">
+        <meta name="supported-color-schemes" content="dark light">
+    </head>
+ 
+    <body bgcolor="#0d1b2e" style="margin: 0; padding: 0; background-color: #0d1b2e !important; font-family: Arial, sans-serif;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td align="center" style="padding: 24px 16px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#111e30" style="background-color: #111e30 !important; border: 1px solid #1a2d45; box-shadow: 0px 0px 5px 0.5px #1a2d45; border-radius: 10px; overflow: hidden;">
+ 
+                        <tr>
+                            <td align="center" bgcolor="#111e30" style="background-color: #111e30 !important; box-shadow: 0px 0px 5px 0.5px #1a2d45; border-bottom: 1px solid #1a2d45; padding: 36px 32px;">
+                                <img src="https://voxform.co.uk/Assets/Images/Logo.png" alt="VoxForm Logo" width="100" style="display: block; margin: 0 auto 16px;" />
+                            </td>
+                        </tr>
+ 
+                        <tr>
+                            <td style="padding: 36px 40px; color: #111e30; font-size: 15px; line-height: 1.7;">
+                                <p style="margin: 0 0 12px; font-size: 24px; font-weight: bold; color: #ffffff;">Hi {{NAME}},</p>
+                                <p style="margin: 0 0 24px; color: #8ba4bc; font-size: 18px;">Your order <strong>#{{ORDER_ID}}</strong> has been dispatched and is on its way to you.</p>
+ 
+                                <p style="margin: 0 0 10px; font-size: 16px; font-weight: bold; color: #ffffff;">Tracking Information</p>
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border: 1px solid #1a2d45; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+                                    <tr>
+                                        <td style="padding: 10px 16px; color: #8ba4bc; font-size: 14px; border-bottom: 1px solid #1a2d45;">Carrier</td>
+                                        <td align="right" style="padding: 10px 16px; color: #ffffff; font-size: 14px; border-bottom: 1px solid #1a2d45;">{{CARRIER}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 16px; color: #8ba4bc; font-size: 14px; border-bottom: 1px solid #1a2d45;">Tracking Number</td>
+                                        <td align="right" style="padding: 10px 16px; color: #ffffff; font-size: 14px; border-bottom: 1px solid #1a2d45; font-family: monospace; letter-spacing: 1px;">{{TRACKING_NUMBER}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 16px; color: #8ba4bc; font-size: 14px;">Estimated Delivery</td>
+                                        <td align="right" style="padding: 10px 16px; color: #ffffff; font-size: 14px;">{{EST_DELIVERY}}</td>
+                                    </tr>
+                                </table>
+ 
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 24px;">
+                                    <tr>
+                                        <td align="center">
+                                            <a href="{{TRACKING_LINK}}" bgcolor="#0A4F6E" style="display: inline-block; background-color: #0A4F6E; color: #00c8d4; font-size: 15px; text-decoration: none; padding: 14px 32px; border-radius: 6px;">Track Your Order</a>
+                                        </td>
+                                    </tr>
+                                </table>
+ 
+                                <p style="margin: 0 0 10px; font-size: 16px; font-weight: bold; color: #ffffff;">Order Summary</p>
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border: 1px solid #1a2d45; border-radius: 8px; overflow: hidden; margin-bottom: 24px;">
+                                    <tr>
+                                        <td style="padding: 10px 16px; color: #8ba4bc; font-size: 14px; border-bottom: 1px solid #1a2d45;">Order ID</td>
+                                        <td align="right" style="padding: 10px 16px; color: #ffffff; font-size: 14px; border-bottom: 1px solid #1a2d45;">#{{ORDER_ID}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 10px 16px; color: #8ba4bc; font-size: 14px;">Item</td>
+                                        <td align="right" style="padding: 10px 16px; color: #ffffff; font-size: 14px;">{{ITEM}}</td>
+                                    </tr>
+                                </table>
+ 
+                                <p style="margin: 0 0 10px; font-size: 16px; font-weight: bold; color: #ffffff;">Delivery Address</p>
+                                <p style="margin: 0 0 24px; color: #8ba4bc; font-size: 15px; line-height: 1.7;">
+                                    {{ADDRESS_LINE_1}}<br>
+                                    {{ADDRESS_LINE_2}}<br>
+                                    {{CITY}}<br>
+                                    {{POSTCODE}}<br>
+                                    {{COUNTY}}<br>
+                                    {{COUNTRY}}
+                                </p>
+ 
+                                <p style="margin: 0 0 24px; color: #8ba4bc; font-size: 15px; padding: 14px 16px; border-left: 3px solid #00c8d4; background-color: #0d1b2e; border-radius: 0 6px 6px 0;">
+                                    If your parcel hasn't arrived within <strong style="color: #ffffff;">10 working days</strong> of this email, please get in touch and we'll look into it for you.
+                                </p>
+ 
+                                <p style="margin: 0; color: #8ba4bc; font-size: 15px;">Got a question? Check the <a href="https://voxform.co.uk/FAQ" style="color: #00c8d4; text-decoration: none;">FAQ</a> page first, or reply to this email and we'll get back to you as soon as possible.</p>
+                            </td>
+                        </tr>
+ 
+                        <tr>
+                            <td align="center" bgcolor="#111e30" style="padding: 20px 40px; border-top: 1px solid #1a2d45; background-color: #111e30 !important; box-shadow: 0px 0px 5px 0.5px #1a2d45;">
+                                <p style="margin: 0 0 8px; font-size: 12px; color: #8ba4bc;">Copyright &copy; 2026 VoxForm. All rights reserved.</p>
+ 
+                                <a style="margin-right: 10px;" href="https://voxform.co.uk/"><img alt="Website" src="https://voxform.co.uk/Assets/Images/Website.svg"></a>
+                                <a style="margin-right: 10px;" href="mailto:contact@voxform.co.uk"><img alt="Email" src="https://voxform.co.uk/Assets/Images/Mail.svg"></a>
+                                <a style="margin-right: 10px;" href="https://x.com/voxformuk"><img width="24" alt="X" src="https://voxform.co.uk/Assets/Images/X.svg"></a>
+                                <a style="margin-right: 10px;" href="https://instagram.com/voxformuk"><img width="24" alt="Instagram" src="https://voxform.co.uk/Assets/Images/Instagram.svg"></a>
+                    <a href="https://www.facebook.com/VoxFormUK"><img width="24" alt="Facebook" src="https://voxform.co.uk/Assets/Images/Facebook.svg"></a>
+                            </td>
+                        </tr>
+ 
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

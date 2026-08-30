@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Contact/styles.css">
+        <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
+        <script src="/Contact/script.js"></script>
+        <link rel="canonical" href="https://voxform.co.uk/Contact/">
+        <link rel="stylesheet" href="/Header/styles.css">
+        <link rel="stylesheet" href="/Footer/styles.css">
+        <script src="/Header/script.js" defer></script>
+        <meta property="og:title" content="Contact | VoxForm">
+        <meta property="og:description" content="Have a question or need some help? Get in touch and we'll get back to you as soon as possible.">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:url" content="https://voxform.co.uk/Contact/">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <title>Contact | VoxForm</title>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div id="content">
+            <span id="contactUsHeading">Contact Us</span>
+
+            <span id="contactUsDescription">Have a question or need some help? Check the <a href="/FAQ" target="_blank">FAQ</a> page first, or get in touch and we'll get back to you as soon as possible.</span>
+
+            <div id="contactForm">
+                <span id="nameHeader">Name</span>
+                <input type="text" id="name" placeholder="Your Name">
+                
+                <span id="emailHeader">Email</span>
+                <input type="email" id="email" placeholder="Your Email">
+
+                <span id="subjectHeader">Subject</span>
+                <select id="subject">
+                    <option value="General Enquiry">General Enquiry</option>
+                    <option value="Order Query">Order Query</option>
+                    <option value="Custom Print Question">Custom Print Question</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <span id="messageHeader">Message</span>
+                <textarea id="message" placeholder="Your Message"></textarea>
+
+                <button onclick="sendEmail()" id="sendBtn">Send Message</button>
+
+                <span id="contactFormDescription">We aim to respond to all enquiries within 48 hours.</span>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

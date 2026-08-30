@@ -1,0 +1,142 @@
+@media (min-width: 769px) {
+    #footerDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        box-shadow: 0px 0px 5px 0.5px var(--border);
+        margin-top: 40px;
+        padding: 40px 0;
+    }
+
+    #pageLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #footerRow1 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer {
+        width: 100%;
+        background-color: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        box-shadow: 0px 0px 5px 0.5px var(--border);
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    #pageLinks {
+        display: flex;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footerRow1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 40px;
+    }
+}
+
+#copyright {
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#pageLinks a {
+    text-decoration: none;
+    color: var(--cyan);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+#pageLinks a:hover {
+    color: var(--purple);
+}
+
+#footerQuoteLink {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#footerQuoteLink:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#socialLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 33%;
+}
+
+#socialLinks img {
+    cursor: pointer;
+    width: 24px;
+}
+
+#footerLogo {
+    width: 250px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+#footerLogoDiv {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+#paymentMethods {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.paymentLogo {
+    height: 35px;
+}
+
+#footerRow2 {
+    display: flex;
+    flex-direction: column;
+}

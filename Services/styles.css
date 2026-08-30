@@ -1,0 +1,132 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 769px) {
+    #whatWeDoCards {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #howItWorksCards {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #whatWeDoCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #howItWorksCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 225px;
+}
+
+#servicesHeading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#whatWeDoHeading, #howItWorksHeading, #developersHeading {
+    color: var(--text-primary);
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#whatWeDoCard1, #whatWeDoCard2, #whatWeDoCard3, #whatWeDoCard4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    gap: 10px;
+    width: 300px;
+}
+
+#whatWeDoCard1Title, #whatWeDoCard2Title, #whatWeDoCard3Title, #whatWeDoCard4Title {
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+#whatWeDoCard1Description, #whatWeDoCard2Description, #whatWeDoCard3Description, #whatWeDoCard4Description {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#howItWorksDescription {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 1500px;
+    text-align: center;
+}
+
+#howItWorksCard1, #howItWorksCard2, #howItWorksCard3, #howItWorksCard4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    gap: 10px;
+    width: 300px;
+}
+
+#howItWorksCard1Title, #howItWorksCard2Title, #howItWorksCard3Title, #howItWorksCard4Title {
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+#howItWorksCard1Description, #howItWorksCard2Description, #howItWorksCard3Description, #howItWorksCard4Description {
+    color: var(--text-secondary);
+    font-size: 16px;
+}

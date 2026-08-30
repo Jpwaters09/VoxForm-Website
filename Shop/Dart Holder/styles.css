@@ -1,0 +1,507 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+    #content {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px;
+        gap: 100px;
+        margin-bottom: 250px;
+    }
+
+    #orderFormDiv {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+
+    #orderForm, #placedPopup {
+        position: fixed;
+        background-color: var(--bg-secondary);
+        padding: 40px;
+        top: 30px;
+        max-width: 700px;
+        bottom: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        gap: 100px;
+        margin-bottom: 80px;
+    }
+
+    #orderFormDiv {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #orderForm, #placedPopup {
+        position: fixed;
+        background-color: var(--bg-secondary);
+        padding: 40px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: 1px solid var(--border);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+#images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#imageSelector {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageSelector button {
+    background-color: #00000000;
+    border: none;
+    padding: 0;
+    font-family: "Exo 2";
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+#image1Btn {
+    color: var(--text-primary);
+}
+
+#image2Btn {
+    color: var(--text-secondary);
+}
+
+#leftBtn, #rightBtn {
+    cursor: pointer;
+    width: 24px;
+}
+
+#rightBtn {
+    margin-left: 5px;
+}
+
+#productImage {
+    width: 400px;
+    border-radius: 10px;
+    -webkit-user-drag: none;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+}
+
+#itemTitle {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#itemPrice {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#materialsHeading {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#materialsInfo {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#materialsInfo a {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+#materialsInfo a:hover {
+    color: var(--purple);
+}
+
+#ABSHeading, #PLAHeading {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: help;
+}
+
+#ABSColours {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#PLAColours {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.ABSColour, .PLAColour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#shipping {
+    appearance: none;
+    background-color: var(--btn-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Exo 2";
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    cursor: pointer;
+    outline: none;
+    background-image: url("/Assets/Images/Arrow Down.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    height: 45px;
+    width: 300px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#shippingDescription {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#shippingDescription a {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+#shippingDescription a:hover {
+    color: var(--purple);
+}
+
+#shipping:focus, #shipping:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+.ABSColourBtn, .PLAColourBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline-offset: 2px;
+    outline: 2px solid #00000000;
+    transition: outline 0.3s ease;
+}
+
+.ABSColourText, .PLAColourText {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+#descriptionText {
+    color: var(--text-primary);
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#itemDescription {
+    font-size: 16px;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+#orderBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#orderBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#left, #right {
+    display: flex;
+    flex-direction: column;
+}
+
+#dim {
+    background-color: #000000b6;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#orderHeading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#orderDetails {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 1500px;
+}
+
+#quantityHeading, #shippingHeading {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#quantity {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--btn-secondary);
+    border: 1px solid var(--border);
+    outline: none;
+    font-family: "Exo 2";
+    font-size: 16px;
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 40px;
+    width: 50px;
+}
+
+#nameInput, #emailInput, #phoneInput, #address1Input, #address2Input, #cityInput, #postcodeInput, #countyInput, #countryInput {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    width: 300px;
+}
+
+#nameInput:focus, #emailInput:focus, #phoneInput:focus, #address1Input:focus, #address2Input:focus, #cityInput:focus, #postcodeInput:focus, #countyInput:focus, #countryInput:focus, #quantity:focus, #nameInput:hover, #emailInput:hover, #phoneInput:hover, #address1Input:hover, #address2Input:hover, #cityInput:hover, #postcodeInput:hover, #countyInput:hover, #countryInput:hover, #quantity:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#nameHeading, #emailHeading, #phoneHeading, #address1Heading, #address2Heading, #cityHeading, #postcodeHeading, #countyHeading, #countryHeading {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#legalBox {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#legalText {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#legalText a {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#legalText a:hover {
+    color: var(--purple);
+}
+
+#readLegalBox {
+    accent-color: var(--cyan);
+}
+
+#submitBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+#orderFormBtns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+#closeBtn2 {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+#submitBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#closeBtn2:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#orderStatusHeading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#orderSucccesfulSubheading {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+#orderNumberText {
+    font-size: 24px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#orderNumber {
+    font-size: 48px;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#closeBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    margin-top: auto;
+}
+
+#closeBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}

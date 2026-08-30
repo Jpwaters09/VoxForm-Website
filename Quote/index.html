@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Quote/styles.css">
+        <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
+        <script src="/Quote/script.js"></script>
+        <link rel="canonical" href="https://voxform.co.uk/Quote/">
+        <link rel="stylesheet" href="/Header/styles.css">
+        <link rel="stylesheet" href="/Footer/styles.css">
+        <script src="/Header/script.js" defer></script>
+        <meta property="og:title" content="Quote | VoxForm">
+        <meta property="og:description" content="Get a free quote for your custom 3D printing project. Upload your model file and we'll get back to you with a price.">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:url" content="https://voxform.co.uk/Quote/">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <title>Quote | VoxForm</title>
+        
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Custom 3D Printing Service",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "VoxForm",
+                "url": "https://voxform.co.uk"
+            },
+            "description": "Get a free quote for your custom 3D printing project. Upload your model file and we'll get back to you with a price.",
+            "areaServed": "GB",
+            "url": "https://voxform.co.uk/Quote",
+            "serviceType": "3D Printing"
+        }
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div id="content">
+            <span id="heading">Get a Quote</span>
+            <span id="subheading">Enter your details below and we'll send you an email with a secure payment link. Once your payment is complete, you'll receive a confirmation email with your order summary. If you have any questions before ordering, check the <a href="/FAQ" target="_blank">FAQ</a> page, or <a href="mailto:contact@voxform.co.uk">contact us</a>.</span>
+
+            <div id="form">
+                <div id="left">
+                    <span id="modelFileHeading">Model File</span>
+                    <span id="modelFileDescription">Looking for a design? Find thousands of free 3D models on <a href="https://printables.com" target="_blank">Printables</a> — just download and upload below. Make sure the model allows commercial use before ordering.</span>
+                    <div id="fileDiv">
+                        <input onchange="addFile()" style="display: none;" type="file" id="filePickerInput" accept=".stl,.obj,.3mf,.step,.stp,.zip,model/stl,model/obj,application/zip,application/x-zip-compressed"></input>
+                        <button onclick="document.getElementById('filePickerInput').click()" id="filePickerBtn">Add 3D Files</button>
+                        <span id="fileText">No file chosen</span>
+                    </div>
+
+                    <span id="quantityHeading">Quantity</span>
+                    <input type="number" id="quantity" value="1" max="10" min="1">
+
+                    <span id="materialsHeading">Material & Colour</span>
+                    <span id="materialsInfo">Not sure which material to choose? Visit our <a href="/About" target="_blank">About page</a> to learn more about our filament materials.</span>
+
+                    <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
+                    <div id="ABSColours">
+                        <div class="ABSColour" onclick="filamentColour('ABS', 'Grey')">
+                            <div id="ABSGrey" class="ABSColourBtn" style="background-color: #8f949b;"></div>
+                            <span class="ABSColourText">Grey</span>
+                        </div>
+                    </div>
+                    
+                    <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
+                    <div id="PLAColours">
+                        <div class="PLAColour" onclick="filamentColour('PLA', 'Black')">
+                            <div id="PLABlack" class="PLAColourBtn" style="background-color: #000000;"></div>
+                            <span class="PLAColourText">Black</span>
+                        </div>
+
+                        <div class="PLAColour" onclick="filamentColour('PLA', 'White')">
+                            <div id="PLAWhite" class="PLAColourBtn" style="background-color: #ffffff;"></div>
+                            <span class="PLAColourText">White</span>
+                        </div>
+
+                        <div class="PLAColour" onclick="filamentColour('PLA', 'Red')">
+                            <div id="PLARed" class="PLAColourBtn" style="background-color: #ea140e;"></div>
+                            <span class="PLAColourText">Red</span>
+                        </div>
+
+                        <div class="PLAColour" onclick="filamentColour('PLA', 'Blue')">
+                            <div id="PLABlue" class="PLAColourBtn" style="background-color: #2240af;"></div>
+                            <span class="PLAColourText">Blue</span>
+                        </div>
+                    </div>
+
+                    <span id="finishHeading">Finish</span>
+                    <select id="finish">
+                        <option value="" disabled selected>Select Finish</option>
+                        <option value="Ironing">Ironing (Smooth, polished top surface)</option>
+                        <option value="No Ironing">No Ironing (Standard finish)</option>
+                    </select>
+
+                    <span id="extraInfoHeading">Extra Info</span>
+                    <textarea id="extraInfo" placeholder="Extra Info"></textarea>
+                </div>
+
+                <div id="right">
+                    <span id="shippingHeading">Shipping</span>
+                    <span id="shippingDescription">For shipping estimates, please use the <a href="https://send.royalmail.com/" target="_blank">Royal Mail Website</a> or the <a href="https://www.yodel.co.uk/send-a-parcel" target="_blank">Yodel Website</a>.</span>
+                    <select id="shipping">
+                        <option value="" disabled selected>Select Shipping</option>
+                        <option value="RMT24">Royal Mail Tracked 24 - 1-2 days</option>
+                        <option value="RMT48">Royal Mail Tracked 48 - 2-3 days</option>
+                        <option value="YODEL">Yodel - 4-5 days</option>
+                    </select>
+
+                    <span id="nameHeading">Name</span>
+                    <input type="text" id="nameInput" placeholder="Your Name">
+
+                    <span id="emailHeading">Email</span>
+                    <input type="email" id="emailInput" placeholder="Your Email">
+
+                    <span id="phoneHeading">Phone Number</span>
+                    <input type="tel" id="phoneInput" placeholder="Your Phone Number">
+
+                    <span id="address1Heading">Address Line 1</span>
+                    <input type="text" id="address1Input" placeholder="Address Line 1">
+
+                    <span id="address2Heading">Address Line 2</span>
+                    <input type="text" id="address2Input" placeholder="Address Line 2 (optional)">
+
+                    <span id="cityHeading">City</span>
+                    <input type="text" id="cityInput" placeholder="City">
+
+                    <span id="countyHeading">County</span>
+                    <input type="text" id="countyInput" placeholder="County">
+
+                    <span id="postcodeHeading">Postcode</span>
+                    <input type="text" id="postcodeInput" placeholder="Postcode">
+
+                    <span id="countryHeading">Country</span>
+                    <input type="text" id="countryInput" placeholder="County">
+                    
+                    <div id="socialMediaBox">
+                        <input type="checkbox" id="socialMediaConsent">
+                        <span id="socialMediaText">I'm happy for VoxForm to share photos and videos (including print timelapses) of my order on social media (Instagram, X, Facebook, etc.)</span>
+                    </div>
+
+                    <div id="legalBox">
+                        <input type="checkbox" id="readLegalBox">
+                        <span id="legalText">I have read and agree to the <a target="_blank" href="/Legal/">Legal Policies</a>, including our Terms & Conditions, Privacy Policy, and Returns & Refunds Policy.</span>
+                    </div>
+
+                    <button onclick="submit()" id="submitBtn">Submit</button>
+                </div>
+            </div>
+
+            <div id="placedPopup" style="display: none;">
+                <span id="orderStatusHeading">Order Successfully Placed!</span>
+                <span id="orderSucccesfulSubheading"></span>
+
+                <span id="orderNumberText" style="display: none;">Your order number is:</span>
+                <span id="orderNumber"></span>
+
+                <button id="closeBtn" onclick="closePopup()">Close</button>
+            </div>
+
+            <div id="dim" style="display: none;"></div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

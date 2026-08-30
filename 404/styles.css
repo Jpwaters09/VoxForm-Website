@@ -1,0 +1,59 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 769px) {
+    #content {
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+#heading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#subheading {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 360px;
+    text-align: center;
+}

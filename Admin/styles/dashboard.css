@@ -1,0 +1,525 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0px 0px 5px 0.5px var(--border);
+    padding: 20px;
+}
+
+#headerLogo {
+    width: 100px;
+}
+
+@media (min-width: 769px) {
+    #userDiv {
+        margin-left: auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #assignOrderDiv, #quoteOrderDiv, #paidOrderDiv, #completeOrderDiv {
+        position: fixed;
+        background-color: var(--bg-secondary);
+        padding: 40px;
+        top: 100px;
+        max-width: 700px;
+        bottom: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 750px;
+        overflow-x: hidden;
+    }
+
+    #timeDiv, #materialCalcDiv {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #userDiv {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    #assignOrderDiv, #quoteOrderDiv, #paidOrderDiv, #completeOrderDiv {
+        position: fixed;
+        background-color: var(--bg-secondary);
+        padding: 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid var(--border);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 750px;
+        overflow-x: hidden;
+    }
+
+    #timeDiv, #materialCalcDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+#usernameText {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+#logoutBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    text-decoration: none;
+    outline: none;
+}
+
+#logoutBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#orders, #otherOrders, #completedOrders {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.orderCard {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.orderCard:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+.orderNumber {
+    color: var(--text-primary);
+    font-size: 48px;
+}
+
+.orderTitle {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+.orderStatus, .orderAssignee {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#filterBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.selectedFilter {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    height: 100%;
+}
+
+.unSelectedFilter {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    height: 100%;
+}
+
+.selectedFilter:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+.unSelectedFilter:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#dim {
+    background-color: #000000b6;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 100px;
+    margin-bottom: 80px;
+}
+
+#orderDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#assignOrderText, #quoteOrderText, #paidOrderText, #completeOrderText {
+    color: var(--text-primary);
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#assignOrderBox {
+    appearance: none;
+    background-color: var(--btn-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Exo 2";
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    cursor: pointer;
+    outline: none;
+    background-image: url("/Assets/Images/Arrow Down.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    height: 45px;
+    width: 250px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#priceCalcSelect {
+    appearance: none;
+    background-color: var(--btn-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Exo 2";
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
+    background-image: url("/Assets/Images/Arrow Down.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    height: 45px;
+    width: 250px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#fixedPriceBox {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#hours, #minutes {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#assignOrderBox:focus, #assignOrderBox:hover, #priceCalcSelect:focus, #priceCalcSelect:hover, #fixedPriceBox:focus, #fixedPriceBox:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#submitAssignee, #submitQuote, #submitShipping, #submitComplete {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#submitAssignee:hover, #submitQuote:hover, #submitShipping:hover, #submitComplete:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#closeAssignee, #submitClose, #submit1Close, #submit2Close {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+#closeAssignee:hover, #submitClose:hover, #submit1Close:hover, #submit2Close:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#timeDiv div, #materialCalcDiv div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#hoursText, #minutesText, #filamentCostText, #massText {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+#shippingHeading, #fixedPriceText {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#quoteItemText, #fileDownload, #paidItemText, #itemMassText {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#fileDownload a {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#fileDownload a:hover {
+    color: var(--purple);
+}
+
+#mass, #filamentCost, #shippingPrice {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#mass:focus, #mass:hover, #hours:focus, #hours:hover, #minutes:focus, #minutes:hover, #filamentCost:focus, #filamentCost:hover, #shippingPrice:focus, #shippingPrice:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#totalPrice {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#buyerInfoHeading, #addressHeading {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#nameText, #emailText, #addressLine1Text, #addressLine2Text, #cityText, #countyText, #postcodeText {
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-align: center;
+}
+
+#quoteInfo {
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#filamentType1, #filamentColour1, #filamentType2, #filamentColour2, #personalisation, #style, #finish, #quantity {
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-align: center;
+}
+
+#phoneText {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#countryText {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#shippingHeading a {
+    text-decoration: none;
+    color: var(--cyan);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+#shippingHeading a:hover {
+    color: var(--purple);
+}
+
+#videoButton, #labelButton {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#videoButton:hover, #labelButton:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#videoText {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+}
+
+#trackingNumber {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    width: 250px;
+    margin-top: 10px;
+}
+
+#trackingNumber:focus, #trackingNumber:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}

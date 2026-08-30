@@ -1,0 +1,33 @@
+name: Deploy to Production
+
+on:
+  push:
+    tags:
+      -  'v*.*.*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Deploy via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          protocol: sftp
+          local-dir: ./
+          server-dir: /public/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.env
+            **.env.example
+            **/node_modules/**
+            **/tests/**

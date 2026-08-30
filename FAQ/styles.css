@@ -1,0 +1,149 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 769px) {
+    #content {
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #questions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    #right {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer {
+        width: 100%;
+        background-color: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        box-shadow: 0px 0px 5px 0.5px var(--border);
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    #pageLinks {
+        display: flex;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content {
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #right {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#heading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.questionsHeading {
+    color: var(--text-primary);
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.questionHeading {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.questionAnswer {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.questionAnswer a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--cyan);
+    transition: color 0.3s ease;
+}
+
+.questionAnswer a:hover {
+    color: var(--purple);
+}

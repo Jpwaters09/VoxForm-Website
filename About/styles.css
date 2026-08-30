@@ -1,0 +1,199 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+
+@media (min-width: 769px) {  
+    #ourMaterialsCards {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        max-width: 1500px;
+    }
+
+    #developerCards {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #ourMaterialsCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 1500px;
+    }
+
+    #developerCards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#developerCard1, #developerCard2 {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+#developerCard1Name, #developerCard2Name {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#serviceHeader {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#serviceHeaderLink {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#serviceHeaderLink:hover {
+    color: var(--purple);
+}
+
+#developerCard1Description, #developerCard2Description {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#developerCard1Socials, #developerCard2Socials {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+#developerCard1Socials a img, #developerCard2Socials a img {
+    width: 24px;
+}
+
+#AboutUsHeading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#whatWeDoHeading, #ourMaterialsHeading, #getInvolvedHeading, #developersHeading {
+    color: var(--text-primary);
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#AboutUsDescription, #whatWeDoDescription {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 1500px;
+    text-align: center;
+}
+
+#ourMaterialsDescription {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 1500px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#card1, #card2, #card3, #card4, #card5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    gap: 10px;
+    width: 300px;
+}
+
+#card1Title, #card2Title, #card3Title, #card4Title, #card5Title {
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+#card1Description, #card2Description, #card3Description, #card4Description, #card5Description {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#ourMaterialsDescription2 {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 1500px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#getInvolvedDescription {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 1500px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#getInvolvedButton {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#getInvolvedButton:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}

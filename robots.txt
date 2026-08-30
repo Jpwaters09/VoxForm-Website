@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://voxform.co.uk/sitemap.xml

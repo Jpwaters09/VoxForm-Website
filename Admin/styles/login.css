@@ -1,0 +1,102 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+    #loginDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        border: 1px solid var(--border);
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    #loginDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        border: 1px solid var(--border);
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
+
+#loginTitle {
+    color: var(--text-primary);
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#username, #password {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#username:focus, #username:hover, #password:focus, #password:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#loginBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#loginBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}

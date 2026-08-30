@@ -1,0 +1,13 @@
+{
+    "name": "VoxForm Admin",
+    "short_name": "VoxForm",
+    "start_url": "/Admin/dashboard.html",
+    "display": "standalone",
+    "background_color": "#0d1b2e",
+    "theme_color": "#00c8d4",
+    "orientation": "portrait",
+    "icons": [
+        { "src": "/Assets/Favicon/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "/Assets/Favicon/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}

@@ -1,0 +1,128 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+    #payCard {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding: 40px;
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+    }
+}
+
+@media (max-width: 768px) {
+    #payCard {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        padding: 40px;
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#heading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#itemDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+#totalDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#shippingDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#item, #shippingHeading {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+#itemPrice, #shippingPrice {
+    color: var(--text-secondary);
+    margin-left: auto;
+}
+
+#totalHeading {
+    color: var(--text-primary);
+    font-size: 24px;
+}
+
+#total {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-left: auto;
+}
+
+#payNow {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-family: "Exo 2";
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#payNow:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}

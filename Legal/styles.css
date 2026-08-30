@@ -1,0 +1,197 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 769px) {
+    #content {
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #policies {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    #right {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #policies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #right {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#heading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#lastUpdated {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 1500px;
+}
+
+#left1Heading, #right1Heading, #left2Heading, #right2ContactHeading {
+    color: var(--text-primary);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#left1Subheading, #right1Subheading, #right2ContactDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#left1AboutUsHeading, #left1OrdersHeading, #left1PricingHeading, #left1YourFilesHeading, #left1IntellectualPropertyHeading, #left1ProhibitedModelsHeading, #left1ColoursAndFinishesHeading, #left1LimitationOfLiabilityHeading, #left1GoverningLawHeading {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#left1AboutUsDescription, #left1OrdersDescription, #left1PricingDescription, #left1YourFilesDescription, #left1IntellectualPropertyDescription, #left1ColoursAndFinishesDescription, #left1LimitationOfLiabilityDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#left1GoverningLawDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#left2CustomPrintsHeading, #left2IncorrectOrdersHeading, #left2FileErrorsHeading, #left2ShippingDamageHeading, #left2RefundProcessingHeading, #left2StatutoryRightsHeading {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#left2CustomPrintsDescription, #left2IncorrectOrdersDescription, #left2FileErrorsDescription, #left2ShippingDamageDescription, #left2RefundProcessingDescription, #left2StatutoryRightsDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#right1WhoWeAreHeading, #right1WhatDataWeCollectHeading, #right1HowWeUseYourDataHeading, #right1LegalBasisForProcessingHeading, #right1DataSharingHeading, #right1DataRetentionHeading, #right1YourRightsHeading, #right1CookiesHeading, #right1ChangesToThisPolicyHeading {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#right1WhoWeAreDescription, #right1HowWeUseYourDataDescription2, #right1DataSharingDescription2, #right1DataRetentionDescription, #right1YourRightsDescription2, #right1CookiesDescription, #right1WhatDataWeCollectList, #right1HowWeUseYourDataList, #right1LegalBasisForProcessingList, #right1DataSharingList, #right1YourRightsList, #left1ProhibitedModelsList {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#right1ChangesToThisPolicyDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#right1WhatDataWeCollectDescription, #right1HowWeUseYourDataDescription, #right1LegalBasisForProcessingDescription, #right1DataSharingDescription, #right1YourRightsDescription, #left1ProhibitedModelsDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#right1WhoWeAreDescription a, #right1YourRightsDescription2 a, #left2IncorrectOrdersDescription a {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#right1WhoWeAreDescription a:hover, #right1YourRightsDescription2 a:hover, #left2IncorrectOrdersDescription a:hover {
+    color: var(--purple);
+}
+
+#right2ContactDescriptionEmail {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#right2ContactDescriptionEmail a {
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#right2ContactDescriptionEmail a:hover {
+    color: var(--purple);
+}

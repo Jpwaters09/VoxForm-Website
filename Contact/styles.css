@@ -1,0 +1,165 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+}
+
+@media (min-width: 769px) {
+    #contactForm {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding: 40px;
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+    }
+}
+
+@media (max-width: 768px) {
+    #contactForm {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: var(--bg-secondary);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+    }
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#contactUsHeading {
+    font-size: 48px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contactUsDescription {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 1500px;
+}
+
+#contactUsDescription a {
+    text-decoration: none;
+    color: var(--cyan);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+#contactUsDescription a:hover {
+    color: var(--purple);
+}
+
+#nameHeader, #emailHeader, #subjectHeader, #messageHeader {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#name, #email {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#subject {
+    appearance: none;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-image: url("/Assets/Images/Arrow Down.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+    font-family: "Exo 2";
+    height: 45px;
+}
+
+#name:focus, #name:hover, #email:hover, #email:focus, #subject:focus, #subject:hover, #message:focus, #message:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#message {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    resize: vertical;
+    min-height: 150px;
+}
+
+#sendBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 20px;
+    font-family: "Exo 2";
+}
+
+#sendBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#contactFormDescription {
+    text-align: center;
+    color: var(--text-secondary);
+}
