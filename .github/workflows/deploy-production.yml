@@ -23,4 +23,4 @@ jobs:
           REMOTE_PORT: ${{ secrets.SFTP_PORT }}
           SOURCE: "./"
           TARGET: "/home/www/public"
-          EXCLUDE: "/.git/, /.github/, .env, .env.example, README.md, LICENSE, composer.json, composer.lock, .gitignore, /vendor/, .htaccess"
+          EXCLUDE: "/.git/, /.github/, .env, .env.example, README.md, LICENSE, composer.json, composer.lock, .gitignore, /vendor/, .htaccess, SECURITY.md"
