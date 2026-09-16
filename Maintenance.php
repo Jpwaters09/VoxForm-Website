@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/Maintenance/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
-        <script src="/Maintenance/script.js" defer></script>
         <meta name="robots" content="noindex"/>
         <meta http-equiv="refresh" content="10">
         <link rel="stylesheet" href="/Header/styles.css">
