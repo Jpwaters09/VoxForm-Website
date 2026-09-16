@@ -7,16 +7,16 @@
         <link rel="stylesheet" href="/About/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
         <link rel="canonical" href="https://voxform.co.uk/About/">
-        <script src="/About/script.js" defer></script>
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="About | VoxForm">
         <meta property="og:description" content="VoxForm was born out of a shared passion for 3D printing. Two friends, one idea — to take something we love and make it accessible to anyone who needs it, no printer required.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/About/">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <title>About | VoxForm</title>
 
         <script type="application/ld+json">
@@ -61,7 +61,7 @@
         </script>
     </head>
     <body>
-        <div id="header"></div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <span id="AboutUsHeading">About VoxForm</span>
@@ -141,6 +141,6 @@
             <button onclick="window.location.href = '/Quote'" id="getInvolvedButton">Get a Quote</button>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

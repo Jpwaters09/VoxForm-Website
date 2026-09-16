@@ -13,17 +13,18 @@
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Contact | VoxForm">
         <meta property="og:description" content="Have a question or need some help? Get in touch and we'll get back to you as soon as possible.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Contact/">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <title>Contact | VoxForm</title>
     </head>
     <body>
         <div id="header"></div>
 
         <div id="content">
-            <span id="contactUsHeading">Contact Us</span>
+            <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
             <span id="contactUsDescription">Have a question or need some help? Check the <a href="/FAQ" target="_blank">FAQ</a> page first, or get in touch and we'll get back to you as soon as possible.</span>
 
@@ -52,6 +53,6 @@
             </div>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

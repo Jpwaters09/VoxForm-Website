@@ -13,13 +13,14 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:site_name" content="VoxForm">
-        <meta property="og:title" content="Custom 3D Printing UK | VoxForm">
+        <meta property="og:title" content="VoxForm | Custom 3D Printing UK">
         <meta property="og:description" content="Custom 3D printing on demand across the UK. Upload your design and we'll handle the rest - fast turnaround, quality prints.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
-        <title>Custom 3D Printing UK | VoxForm</title>
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
+        <title>VoxForm | Custom 3D Printing UK</title>
 
         <script type="application/ld+json">
         {
@@ -53,7 +54,7 @@
             "@type": "LocalBusiness",
             "name": "VoxForm",
             "url": "https://voxform.co.uk",
-            "logo": "https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png",
+            "logo": "https://voxform.co.uk/Assets/Images/VoxForm-Logo.png",
             "description": "Custom 3D printing service in the UK. Upload your model and get a quote.",
             "email": "contact@voxform.co.uk",
             "areaServed": {
@@ -73,7 +74,7 @@
         </script>
     </head>
     <body>
-        <div id="header"></div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <div id="welcomeDiv">
@@ -165,6 +166,6 @@
             </div>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

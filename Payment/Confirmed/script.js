@@ -1,22 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("/Header/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            initialiseHeader();
-        });
-
-    fetch("/Footer/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            initialiseHeader();
-        });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     const params = new URLSearchParams(window.location.search);
 
     fetch(`/scripts/paymentSuccess.php?${params.toString()}`)

@@ -7,22 +7,6 @@ let card;
 let elements;
 
 document.addEventListener("DOMContentLoaded", async function() {
-    fetch("/Header/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            initialiseHeader();
-        });
-
-    fetch("/Footer/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            initialiseHeader();
-        });
-
     const params = new URLSearchParams(window.location.search);
 
     const response = await fetch(`/scripts/checkOrderDetails.php?${params.toString()}`);

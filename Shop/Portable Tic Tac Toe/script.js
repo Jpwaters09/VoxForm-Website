@@ -5,24 +5,6 @@ let selectedFilamentColour2;
 
 let selectedImage = 1;
 
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("/Header/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            initialiseHeader();
-        });
-
-    fetch("/Footer/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            initialiseHeader();
-        });
-});
-
 function leftBtnClick() {
     let productImage = document.getElementById("productImage");
     let image1Btn = document.getElementById("image1Btn");

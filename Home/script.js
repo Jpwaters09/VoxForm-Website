@@ -12,22 +12,6 @@ const DELAY = 4000;
 let autoTimer;
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("/Header/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            initialiseHeader();
-        });
-
-    fetch("/Footer/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            initialiseHeader();
-        });
-
     wrap = document.getElementById("carousel");
     track = document.getElementById("carouselTrack");
     prevBtn = document.getElementById("prevBtn");

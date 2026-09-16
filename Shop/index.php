@@ -6,21 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/Shop/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
-        <script src="/Shop/script.js" defer></script>
         <link rel="canonical" href="https://voxform.co.uk/Shop/">
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Shop | VoxForm">
         <meta property="og:description" content="Browse our catalogue.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Shop/">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <title>Shop | VoxForm</title>
     </head>
     <body>
-        <div id="header"></div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <span id="heading">Shop</span>
@@ -60,6 +60,6 @@
             </div>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

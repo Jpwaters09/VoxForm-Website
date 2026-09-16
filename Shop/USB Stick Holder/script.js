@@ -51,24 +51,6 @@ function imageBtn2() {
     selectedImage = 2;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("/Header/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            initialiseHeader();
-        });
-
-    fetch("/Footer/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            initialiseHeader();
-        });
-});
-
 function order() {
     let dim = document.getElementById("dim");
     let orderForm = document.getElementById("orderForm");

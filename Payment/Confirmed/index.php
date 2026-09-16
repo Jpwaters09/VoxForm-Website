@@ -13,20 +13,21 @@
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Payment Confirmed | VoxForm">
         <meta property="og:description" content="Payment Confirmed.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Favicon/web-app-manifest-512x512.png">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Payment/Confirmed/">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <title>Payment Confirmed | VoxForm</title>
     </head>
     <body>
-       <div id="header"></div>
+       <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <span id="heading">Payment Successful</span>
             <span id="subheading"></span>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

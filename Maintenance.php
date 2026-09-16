@@ -15,13 +15,13 @@
         <title>Site Under Maintenance | VoxForm</title>
     </head>
     <body>
-       <div id="header"></div>
+       <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <span id="heading">We're currently updating our site</span>
             <span id="subheading">Please check back soon.</span>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

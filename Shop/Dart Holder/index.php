@@ -4,28 +4,29 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Shop/Portable Tic Tac Toe/styles.css">
+        <link rel="stylesheet" href="/Shop/Dart Holder/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
-        <script src="/Shop/Portable Tic Tac Toe/script.js"></script>
-        <link rel="canonical" href="https://voxform.co.uk/Shop/Portable%20Tic%20Tac%20Toe/">
+        <script src="/Shop/Dart Holder/script.js"></script>
+        <link rel="canonical" href="https://voxform.co.uk/Shop/Dart%20Holder/">
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="Portable Tic Tac Toe | VoxForm">
-        <meta property="og:description" content="A simple portable game perfect for enjoying Tic Tac Toe on the go.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Portable%20Tic%20Tac%20Toe/Image%201.webp">
-        <meta property="og:url" content="https://voxform.co.uk/Shop/Portable%20Tic%20Tac%20Toe/">
+        <meta property="og:title" content="Dart Holder | VoxForm">
+        <meta property="og:description" content="A simple holder perfect for keeping a full set of darts organised and ready to throw.">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp">
+        <meta property="og:url" content="https://voxform.co.uk/Shop/Dart%20Holder/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
-        <title>Portable Tic Tac Toe | VoxForm</title>
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp">
+        <title>Dart Holder | VoxForm</title>
 
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "3D Printed Portable Tic Tac Toe",
-            "image": "https://voxform.co.uk/Assets/Images/Product/Portable%20Tic%20Tac%20Toe/Image%201.webp",
-            "description": "A simple portable game perfect for enjoying Tic Tac Toe on the go.",
+            "name": "3D Printed Dart Holder",
+            "image": "https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp",
+            "description": "A simple holder perfect for keeping a full set of darts organised and ready to throw.",
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
@@ -34,17 +35,17 @@
                 "@type": "Offer",
                 "priceCurrency": "GBP",
                 "availability": "https://schema.org/InStock",
-                "url": "https://voxform.co.uk/Shop/Portable%20Tic%20Tac%20Toe"
+                "url": "https://voxform.co.uk/Shop/Dart%20Holder"
             }
         }
         </script>
     </head>
     <body>
-        <div id="header"></div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
-           <div id="images">
-                <img id="productImage" src="/Assets/Images/Product/Portable Tic Tac Toe/Image 1.webp" alt="Portable Tic Tac Toe">
+            <div id="images">
+                <img id="productImage" src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
                 <div id="imageSelector">
                     <img onclick="leftBtnClick()" id="leftBtn" src="/Assets/Images/Back.svg" alt="Left">
                     
@@ -55,14 +56,14 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">Portable Tic Tac Toe</span>
+                <span id="itemTitle">Dart Holder</span>
                 <span id="itemPrice">Free Quote</span>
                 <span id="descriptionText">Description</span>
                 <span id="itemDescription">
-                    A simple portable game perfect for enjoying Tic Tac Toe on the go.
+                    A simple holder perfect for keeping a full set of darts organised and ready to throw.
                     <br><br>
 
-                    Dimensions: 84 x 84 x 12 mm
+                    Dimensions: 87 x 76 x 40 mm
                 </span>
 
                 <button onclick="order()" id="orderBtn">Order</button>
@@ -80,7 +81,7 @@
             </div>
 
             <div id="orderForm" style="display: none;">
-                <span id="orderHeading">Order Portable Tic Tac Toe</span>
+                <span id="orderHeading">Order Dart Holder</span>
 
                 <span id="orderDetails">Enter your details below and we'll send you an email with a secure payment link. Once your payment is complete, you'll receive a confirmation email with your order summary.</span>
                 
@@ -91,75 +92,34 @@
 
                 <span id="materialsInfo">Not sure which material to choose? Visit our <a href="/About" target="_blank">About page</a> to learn more about our filament materials.</span>
                 
-                <div id="materialOptions">
-                    <div id="materials1">
-                        <span id="boardMaterial">Board</span>
-
-                        <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
-                        <div id="ABSColours">
-                            <div class="ABSColour" onclick="filamentColour1('ABS', 'Grey')">
-                                <div id="ABSGrey1" class="ABSColourBtn" style="background-color: #8f949b;"></div>
-                                <span class="ABSColourText">Grey</span>
-                            </div>
-                        </div>
-                        
-                        <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
-                        <div id="PLAColours">
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'Black')">
-                                <div id="PLABlack1" class="PLAColourBtn" style="background-color: #000000;"></div>
-                                <span class="PLAColourText">Black</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'White')">
-                                <div id="PLAWhite1" class="PLAColourBtn" style="background-color: #ffffff;"></div>
-                                <span class="PLAColourText">White</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'Red')">
-                                <div id="PLARed1" class="PLAColourBtn" style="background-color: #ea140e;"></div>
-                                <span class="PLAColourText">Red</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'Blue')">
-                                <div id="PLABlue1" class="PLAColourBtn" style="background-color: #2240af;"></div>
-                                <span class="PLAColourText">Blue</span>
-                            </div>
-                        </div>
+                <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
+                <div id="ABSColours">
+                    <div class="ABSColour" onclick="filamentColour('ABS', 'Grey')">
+                        <div id="ABSGrey" class="ABSColourBtn" style="background-color: #8f949b;"></div>
+                        <span class="ABSColourText">Grey</span>
+                    </div>
+                </div>
+                
+                <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
+                <div id="PLAColours">
+                    <div class="PLAColour" onclick="filamentColour('PLA', 'Black')">
+                        <div id="PLABlack" class="PLAColourBtn" style="background-color: #000000;"></div>
+                        <span class="PLAColourText">Black</span>
                     </div>
 
-                    <div id="materials2">
-                        <span id="piecesMaterial">Pieces</span>
+                    <div class="PLAColour" onclick="filamentColour('PLA', 'White')">
+                        <div id="PLAWhite" class="PLAColourBtn" style="background-color: #ffffff;"></div>
+                        <span class="PLAColourText">White</span>
+                    </div>
 
-                        <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
-                        <div id="ABSColours">
-                            <div class="ABSColour" onclick="filamentColour2('ABS', 'Grey')">
-                                <div id="ABSGrey2" class="ABSColourBtn" style="background-color: #8f949b;"></div>
-                                <span class="ABSColourText">Grey</span>
-                            </div>
-                        </div>
-                        
-                        <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
-                        <div id="PLAColours">
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'Black')">
-                                <div id="PLABlack2" class="PLAColourBtn" style="background-color: #000000;"></div>
-                                <span class="PLAColourText">Black</span>
-                            </div>
+                    <div class="PLAColour" onclick="filamentColour('PLA', 'Red')">
+                        <div id="PLARed" class="PLAColourBtn" style="background-color: #ea140e;"></div>
+                        <span class="PLAColourText">Red</span>
+                    </div>
 
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'White')">
-                                <div id="PLAWhite2" class="PLAColourBtn" style="background-color: #ffffff;"></div>
-                                <span class="PLAColourText">White</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'Red')">
-                                <div id="PLARed2" class="PLAColourBtn" style="background-color: #ea140e;"></div>
-                                <span class="PLAColourText">Red</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'Blue')">
-                                <div id="PLABlue2" class="PLAColourBtn" style="background-color: #2240af;"></div>
-                                <span class="PLAColourText">Blue</span>
-                            </div>
-                        </div>
+                    <div class="PLAColour" onclick="filamentColour('PLA', 'Blue')">
+                        <div id="PLABlue" class="PLAColourBtn" style="background-color: #2240af;"></div>
+                        <span class="PLAColourText">Blue</span>
                     </div>
                 </div>
 
@@ -190,6 +150,7 @@
                         <input type="text" id="address2Input" placeholder="Address Line 2 (optional)">
                     </div>
                     
+
                     <div id="right">
                         <span id="cityHeading">City</span>
                         <input type="text" id="cityInput" placeholder="City">
@@ -219,6 +180,6 @@
             <div id="dim" style="display: none;"></div>
         </div>
 
-        <div id="footer"></div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
     </body>
 </html>

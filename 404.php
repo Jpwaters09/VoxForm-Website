@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/404/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
-        <script src="/404/script.js" defer></script>
         <meta name="robots" content="noindex"/>
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
@@ -14,13 +13,13 @@
         <title>404 | VoxForm</title>
     </head>
     <body>
-       <div id="header"></div>
+       <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <span id="heading">The page you requested cannot be found.</span>
             <span id="subheading">The URL may be misspelled or the page you're looking for is no longer available.</span>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>

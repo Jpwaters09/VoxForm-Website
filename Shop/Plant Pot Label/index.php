@@ -17,6 +17,7 @@
         <meta property="og:url" content="https://voxform.co.uk/Shop/Plant%20Pot%20Label/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/Plant%20Pot%20Label/Image%201.webp">
         <title>Plant Pot Label | VoxForm</title>
 
         <script type="application/ld+json">
@@ -40,7 +41,7 @@
         </script>
     </head>
     <body>
-        <div id="header"></div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <div id="images">
@@ -185,7 +186,7 @@
                 </div>
             </div>
 
-            <div id="dim" style="display: none;"></div>
+            <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
         </div>
 
         <div id="footer"></div>

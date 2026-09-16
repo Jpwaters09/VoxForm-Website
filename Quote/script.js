@@ -2,24 +2,6 @@ let selectedFilamentType;
 let selectedFilamentColour;
 let selectedFile;
 
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("/Header/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-
-            initialiseHeader();
-        });
-
-    fetch("/Footer/index.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            initialiseHeader();
-        });
-});
-
 async function submit() {
     let nameInput = document.getElementById("nameInput").value;
     let emailInput = document.getElementById("emailInput").value;

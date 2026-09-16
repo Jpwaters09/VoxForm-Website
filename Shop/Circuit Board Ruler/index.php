@@ -4,28 +4,29 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Shop/Dart Holder/styles.css">
+        <link rel="stylesheet" href="/Shop/Circuit Board Ruler/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
-        <script src="/Shop/Dart Holder/script.js"></script>
-        <link rel="canonical" href="https://voxform.co.uk/Shop/Dart%20Holder/">
+        <script src="/Shop/Circuit Board Ruler/script.js"></script>
+        <link rel="canonical" href="https://voxform.co.uk/Shop/Circuit%20Board%20Ruler/">
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="Dart Holder | VoxForm">
-        <meta property="og:description" content="A simple holder perfect for keeping a full set of darts organised and ready to throw.">
-        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp">
-        <meta property="og:url" content="https://voxform.co.uk/Shop/Dart%20Holder/">
+        <meta property="og:title" content="Circuit Board Ruler | VoxForm">
+        <meta property="og:description" content="A real printed circuit board (PCB) ruler, perfect for electronics enthusiasts and hobbyists.">
+        <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Circuit%20Board%20Ruler/Image%201.webp">
+        <meta property="og:url" content="https://voxform.co.uk/Shop/Circuit%20Board%20Ruler/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
-        <title>Dart Holder | VoxForm</title>
+        <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/Circuit%20Board%20Ruler/Image%201.webp">
+        <title>Circuit Board Ruler | VoxForm</title>
 
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "3D Printed Dart Holder",
-            "image": "https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp",
-            "description": "A simple holder perfect for keeping a full set of darts organised and ready to throw.",
+            "name": "Circuit Board Ruler",
+            "image": "https://voxform.co.uk/Assets/Images/Product/Circuit%20Board%20Ruler/Image%201.webp",
+            "description": "A real printed circuit board (PCB) ruler, perfect for electronics enthusiasts and hobbyists.",
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
@@ -33,19 +34,19 @@
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "GBP",
+                "price": "3.00",
                 "availability": "https://schema.org/InStock",
-                "url": "https://voxform.co.uk/Shop/Dart%20Holder"
+                "url": "https://voxform.co.uk/Shop/Circuit%20Board%20Ruler"
             }
         }
         </script>
     </head>
     <body>
-        <div id="header"></div>
-        </div>
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <div id="images">
-                <img id="productImage" src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
+                <img id="productImage" src="/Assets/Images/Product/Circuit Board Ruler/Image 1.webp" alt="Circuit Board Ruler">
                 <div id="imageSelector">
                     <img onclick="leftBtnClick()" id="leftBtn" src="/Assets/Images/Back.svg" alt="Left">
                     
@@ -56,14 +57,19 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">Dart Holder</span>
-                <span id="itemPrice">Free Quote</span>
+                <span id="itemTitle">Circuit Board Ruler</span>
+                <span id="itemPrice">£3.50</span>
                 <span id="descriptionText">Description</span>
                 <span id="itemDescription">
-                    A simple holder perfect for keeping a full set of darts organised and ready to throw.
+                    <b>15cm Circuit Board Ruler:</b>
                     <br><br>
-
-                    Dimensions: 87 x 76 x 40 mm
+                    A real printed circuit board (PCB) ruler, perfect for electronics enthusiasts and hobbyists.
+                    <br><br>
+                    Dimensions: 154 mm x 25 mm x 1.6 mm
+                    <br><br>
+                    Material: FR-4
+                    <br><br>
+                    Surface Finish: Lead-Free HASL (Hot Air Solder Levelling)
                 </span>
 
                 <button onclick="order()" id="orderBtn">Order</button>
@@ -81,47 +87,12 @@
             </div>
 
             <div id="orderForm" style="display: none;">
-                <span id="orderHeading">Order Dart Holder</span>
+                <span id="orderHeading">Order Circuit Board Ruler</span>
 
                 <span id="orderDetails">Enter your details below and we'll send you an email with a secure payment link. Once your payment is complete, you'll receive a confirmation email with your order summary.</span>
                 
                 <span id="quantityHeading">Quantity</span>
                 <input type="number" id="quantity" value="1" max="10" min="1">
-                
-                <span id="materialsHeading">Material & Colour</span>
-
-                <span id="materialsInfo">Not sure which material to choose? Visit our <a href="/About" target="_blank">About page</a> to learn more about our filament materials.</span>
-                
-                <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
-                <div id="ABSColours">
-                    <div class="ABSColour" onclick="filamentColour('ABS', 'Grey')">
-                        <div id="ABSGrey" class="ABSColourBtn" style="background-color: #8f949b;"></div>
-                        <span class="ABSColourText">Grey</span>
-                    </div>
-                </div>
-                
-                <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
-                <div id="PLAColours">
-                    <div class="PLAColour" onclick="filamentColour('PLA', 'Black')">
-                        <div id="PLABlack" class="PLAColourBtn" style="background-color: #000000;"></div>
-                        <span class="PLAColourText">Black</span>
-                    </div>
-
-                    <div class="PLAColour" onclick="filamentColour('PLA', 'White')">
-                        <div id="PLAWhite" class="PLAColourBtn" style="background-color: #ffffff;"></div>
-                        <span class="PLAColourText">White</span>
-                    </div>
-
-                    <div class="PLAColour" onclick="filamentColour('PLA', 'Red')">
-                        <div id="PLARed" class="PLAColourBtn" style="background-color: #ea140e;"></div>
-                        <span class="PLAColourText">Red</span>
-                    </div>
-
-                    <div class="PLAColour" onclick="filamentColour('PLA', 'Blue')">
-                        <div id="PLABlue" class="PLAColourBtn" style="background-color: #2240af;"></div>
-                        <span class="PLAColourText">Blue</span>
-                    </div>
-                </div>
 
                 <span id="shippingHeading">Shipping</span>
                 <span id="shippingDescription">For shipping estimates, please use the <a href="https://send.royalmail.com/" target="_blank">Royal Mail Website</a> or the <a href="https://www.yodel.co.uk/send-a-parcel" target="_blank">Yodel Website</a>.</span>
@@ -180,6 +151,6 @@
             <div id="dim" style="display: none;"></div>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>
