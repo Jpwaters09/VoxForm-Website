@@ -34,7 +34,7 @@
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "GBP",
-                "price": "3.00",
+                "price": "3.50",
                 "availability": "https://schema.org/InStock",
                 "url": "https://voxform.co.uk/Shop/Circuit%20Board%20Ruler"
             }
