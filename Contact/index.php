@@ -26,7 +26,7 @@
         <div id="content">
             <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
-            <span id="contactUsDescription">Have a question or need some help? Check the <a href="/FAQ" target="_blank">FAQ</a> page first, or get in touch and we'll get back to you as soon as possible.</span>
+            <h1 id="contactUsDescription">Have a question or need some help? Check the <a href="/FAQ" target="_blank">FAQ</a> page first, or get in touch and we'll get back to you as soon as possible.</h1>
 
             <div id="contactForm">
                 <span id="nameHeader">Name</span>

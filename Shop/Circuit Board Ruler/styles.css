@@ -179,6 +179,7 @@ html, body {
     border: 1px solid var(--border);
     border-radius: 10px;
     margin-bottom: 40px;
+    font-weight: 400;
 }
 
 #orderBtn {

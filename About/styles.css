@@ -133,6 +133,7 @@ html, body {
     font-size: 18px;
     max-width: 1500px;
     text-align: center;
+    font-weight: 400;
 }
 
 #ourMaterialsDescription {

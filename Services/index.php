@@ -23,7 +23,7 @@
         <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
-            <span id="servicesHeading">Our Services</span>
+            <h1 id="servicesHeading">Our Services</h1>
             
             <span id="whatWeDoHeading">What We Do</span>
 

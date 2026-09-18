@@ -24,7 +24,7 @@
 
         <div id="content">
             <span id="heading">Shop</span>
-            <span id="subheading">Browse our catalogue</span>
+            <h1 id="subheading">Browse our catalogue</h1>
 
             <div id="productsCard">
                 <div onclick="window.location.href = '/Shop/Circuit%20Board%20Ruler/'">

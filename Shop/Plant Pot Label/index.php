@@ -30,12 +30,6 @@
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
-            },
-            "offers": {
-                "@type": "Offer",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock",
-                "url": "https://voxform.co.uk/Shop/Plant%20Pot%20Label"
             }
         }
         </script>
@@ -58,12 +52,12 @@
                 <span id="itemTitle">Plant Pot Label</span>
                 <span id="itemPrice">Free Quote</span>
                 <span id="descriptionText">Description</span>
-                <span id="itemDescription">
+                <h1 id="itemDescription">
                     A plant pot label available in 3 different styles, personalised with your own text.
                     <br><br>
 
                     Dimensions: 160 x 20 x 20 mm
-                </span>
+                </h1>
 
                 <button onclick="order()" id="orderBtn">Order</button>
             </div>

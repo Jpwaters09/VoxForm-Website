@@ -42,7 +42,7 @@
 
         <div id="content">
             <span id="heading">Get a Quote</span>
-            <span id="subheading">Enter your details below and we'll send you an email with a secure payment link. Once your payment is complete, you'll receive a confirmation email with your order summary. If you have any questions before ordering, check the <a href="/FAQ" target="_blank">FAQ</a> page, or <a href="mailto:contact@voxform.co.uk">contact us</a>.</span>
+            <h1 id="subheading">Enter your details below and we'll send you an email with a secure payment link. Once your payment is complete, you'll receive a confirmation email with your order summary. If you have any questions before ordering, check the <a href="/FAQ" target="_blank">FAQ</a> page, or <a href="mailto:contact@voxform.co.uk">contact us</a>.</h1>
 
             <div id="form">
                 <div id="left">

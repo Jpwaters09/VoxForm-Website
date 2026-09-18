@@ -68,6 +68,7 @@ html, body {
     margin-bottom: 40px;
     text-align: center;
     max-width: 1500px;
+    font-weight: 400;
 }
 
 #contactUsDescription a {

@@ -115,6 +115,7 @@ html, body {
     color: var(--text-primary);
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 400;
 }
 
 .questionsHeading {

@@ -30,12 +30,6 @@
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
-            },
-            "offers": {
-                "@type": "Offer",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock",
-                "url": "https://voxform.co.uk/Shop/USB%20Stick%20Holder"
             }
         }
         </script>
@@ -59,12 +53,12 @@
                 <span id="itemTitle">USB Stick Holder</span>
                 <span id="itemPrice">Free Quote</span>
                 <span id="descriptionText">Description</span>
-                <span id="itemDescription">
+                <h1 id="itemDescription">
                     A simple holder perfect for keeping up to 6 USB sticks organised and within reach.
                     <br><br>
 
                     Dimensions: 97 x 32 x 17 mm
-                </span>
+                </h1>
 
                 <button onclick="order()" id="orderBtn">Order</button>
             </div>

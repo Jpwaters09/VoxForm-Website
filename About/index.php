@@ -65,7 +65,7 @@
 
         <div id="content">
             <span id="AboutUsHeading">About VoxForm</span>
-            <span id="AboutUsDescription">VoxForm was born out of a shared passion for 3D printing. Two friends, one idea — to take something we love and make it accessible to anyone who needs it, no printer required.</span>
+            <h1 id="AboutUsDescription">VoxForm was born out of a shared passion for 3D printing. Two friends, one idea — to take something we love and make it accessible to anyone who needs it, no printer required.</h1>
 
             <span id="developersHeading">Our team</span>
             <div id="developerCards">

@@ -60,7 +60,7 @@
                 <span id="itemTitle">Circuit Board Ruler</span>
                 <span id="itemPrice">£3.50</span>
                 <span id="descriptionText">Description</span>
-                <span id="itemDescription">
+                <h1 id="itemDescription">
                     <b>15cm Circuit Board Ruler:</b>
                     <br><br>
                     A real printed circuit board (PCB) ruler, perfect for electronics enthusiasts and hobbyists.
@@ -70,7 +70,7 @@
                     Material: FR-4
                     <br><br>
                     Surface Finish: Lead-Free HASL (Hot Air Solder Levelling)
-                </span>
+                </h1>
 
                 <button onclick="order()" id="orderBtn">Order</button>
             </div>
