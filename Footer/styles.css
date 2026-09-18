@@ -70,14 +70,14 @@
     margin-bottom: 20px;
 }
 
-#pageLinks a {
+.linkDesktop a {
     text-decoration: none;
     color: var(--cyan);
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
-#pageLinks a:hover {
+.linkDesktop a:hover {
     color: var(--purple);
 }
 

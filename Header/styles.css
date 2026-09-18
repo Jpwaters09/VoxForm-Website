@@ -55,14 +55,14 @@
         gap: 15px;
     }
 
-    #desktopHeader a {
+    .linkDesktop a {
         text-decoration: none;
         color: var(--cyan);
         font-size: 16px;
         transition: color 0.3s ease;
     }
 
-    #desktopHeader a:hover {
+    .linkDesktop a:hover {
         color: var(--purple);
     }
     
@@ -139,14 +139,14 @@
         top: 38px;
     }
 
-    #headerLinksMobileMenu a {
+    .linkMobile a {
         text-decoration: none;
         color: var(--cyan);
         font-size: 24px;
         transition: color 0.3s ease;
     }
 
-    #headerLinksMobileMenu a:hover {
+    .linkMobile a:hover {
         color: var(--purple);
     }
     
