@@ -96,13 +96,13 @@ html, body {
     color: var(--purple);
 }
 
-#developerCard1Description, #developerCard2Description {
+#developerCard1Description, #developerCard2Description, #developerCard3Description {
     color: var(--text-secondary);
     font-size: 16px;
     margin-bottom: 40px;
 }
 
-#developerCard1Socials, #developerCard2Socialsl, #developerCard3Socials {
+#developerCard1Socials, #developerCard2Socials, #developerCard3Socials {
     display: flex;
     gap: 10px;
     flex-direction: row;
