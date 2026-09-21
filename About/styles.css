@@ -63,7 +63,7 @@ html, body {
     padding: 20px;
 }
 
-#developerCard1, #developerCard2 {
+#developerCard1, #developerCard2, #developerCard3 {
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@ html, body {
     border: 1px solid var(--border);
 }
 
-#developerCard1Name, #developerCard2Name {
+#developerCard1Name, #developerCard2Name, #developerCard3Name {
     color: var(--text-primary);
     font-size: 24px;
     margin-bottom: 15px;
@@ -102,14 +102,14 @@ html, body {
     margin-bottom: 40px;
 }
 
-#developerCard1Socials, #developerCard2Socials {
+#developerCard1Socials, #developerCard2Socialsl, #developerCard3Socials {
     display: flex;
     gap: 10px;
     flex-direction: row;
     margin-bottom: 20px;
 }
 
-#developerCard1Socials a img, #developerCard2Socials a img {
+#developerCard1Socials a img, #developerCard2Socials a img, #developerCard3Socials a img {
     width: 24px;
 }
 
