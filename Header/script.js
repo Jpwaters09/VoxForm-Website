@@ -1,12 +1,6 @@
-let headerLinksMobileMenu;
-let menuButton;
-let menuCloseButton;
-
-function initialiseHeader() {
-    headerLinksMobileMenu = document.getElementById("headerLinksMobileMenu");
-    menuButton = document.getElementById("menuImg");
-    menuCloseButton = document.getElementById("closeButton");
-}
+let headerLinksMobileMenu = document.getElementById("headerLinksMobileMenu");
+let menuButton = document.getElementById("menuImg");
+let menuCloseButton = document.getElementById("closeButton");
 
 function showMobileMenu() {
     headerLinksMobileMenu.style.display = "flex";
