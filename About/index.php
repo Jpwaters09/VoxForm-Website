@@ -109,7 +109,7 @@
                 </div>
 
                 <div id="developerCard3">
-                    <span id="developerCard3Name">James Colleu</span>
+                    <span id="developerCard3Name">James Colley</span>
                     <span id="developerCard3Description">Operations & Social Media Manager</span>
                     <div id="developerCard3Socials">
                         <a target="_blank" href="https://tiktok.com/@the_boulderer1"><img src="/Assets/Images/TikTok.svg" alt="TikTok"></a>
