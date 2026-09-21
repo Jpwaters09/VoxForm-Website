@@ -55,6 +55,20 @@
                     "sameAs": [
                         "https://x.com/matthestar20108"
                     ]
+                },
+                {
+                    "@type": "Person",
+                    "name": "James Colley",
+                    "jobTitle": "Operations & Social Media Manager",
+                    "worksFor": {
+                        "@type": "LocalBusiness",
+                        "name": "VoxForm",
+                        "url": "https://voxform.co.uk"
+                    },
+                    "sameAs": [
+                        "https://tiktok.com/@the_boulderer1",
+                        "https://instagram.com/the_boulderer1"
+                    ]
                 }
             ]
         }
@@ -65,7 +79,7 @@
 
         <div id="content">
             <span id="AboutUsHeading">About VoxForm</span>
-            <h1 id="AboutUsDescription">VoxForm was born out of a shared passion for 3D printing. Two friends, one idea — to take something we love and make it accessible to anyone who needs it, no printer required.</h1>
+            <h1 id="AboutUsDescription">VoxForm was born out of a shared passion for 3D printing. Three friends, one idea — to take something we love and make it accessible to anyone who needs it, no printer required.</h1>
 
             <span id="developersHeading">Our team</span>
             <div id="developerCards">
@@ -91,6 +105,15 @@
                     <span id="developerCard2Description">Founder & Operations Manager</span>
                     <div id="developerCard2Socials">
                         <a target="_blank" href="https://x.com/matthestar20108"><img src="/Assets/Images/X.svg" alt="X"></a>
+                    </div>
+                </div>
+
+                <div id="developerCard3">
+                    <span id="developerCard2Name">James Colleu</span>
+                    <span id="developerCard2Description">Operations & Social Media Manager</span>
+                    <div id="developerCard2Socials">
+                        <a target="_blank" href="https://tiktok.com/@the_boulderer1"><img src="/Assets/Images/TikTok.svg" alt="TikTok"></a>
+                        <a target="_blank" href="https://instagram.com/the_boulderer1"><img src="/Assets/Images/Instagram.svg" alt="Instagram"></a>
                     </div>
                 </div>
             </div>

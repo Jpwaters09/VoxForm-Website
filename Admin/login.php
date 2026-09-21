@@ -10,7 +10,8 @@ $dotenv->load();
 
 $users = [
     $_ENV['USER1'] => ['password' => $_ENV['USER1_PASS'], 'role' => 'manager'],
-    $_ENV['USER2'] => ['password' => $_ENV['USER2_PASS'], 'role' => 'worker']
+    $_ENV['USER2'] => ['password' => $_ENV['USER2_PASS'], 'role' => 'worker'],
+    $_ENV['USER3'] => ['password' => $_ENV['USER3_PASS'], 'role' => 'worker']
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
