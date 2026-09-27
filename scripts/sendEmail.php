@@ -23,7 +23,7 @@ $subject = htmlspecialchars(trim($_POST['subject'] ?? ''), ENT_QUOTES, 'UTF-8');
 $body = htmlspecialchars(trim($_POST['messageBody'] ?? ''), ENT_QUOTES, 'UTF-8');
 
 function sendOrderToDiscord($order) {
-    $webhookurl = $_ENV['DISCORD_ORDERS_WEBHOOK'];
+    $webhookurl = $_ENV['DISCORD_CONTACT_WEBHOOK'];
 
     $embed = [
         'title' => "New message from {$order['name']} - Check VoxForm Contact email for more information",
