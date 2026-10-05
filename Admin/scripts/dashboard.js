@@ -364,8 +364,8 @@ function calculatePrice() {
     let fixedPriceBox = document.getElementById("fixedPriceBox");
     let massInput = document.getElementById("mass");
 
-    const energyCostPerHour = 0.15;
-    const minimumWage = 12.71;
+    const energyCostPerHour = 0.16;
+    const minimumWage = 15;
 
     let priceCalcSelect = document.getElementById("priceCalcSelect").selectedIndex;
 
@@ -395,13 +395,13 @@ function calculatePrice() {
             let energyCost = ((parseFloat(minutes.value) / 60) + parseFloat(hours.value)) * energyCostPerHour;
             let filamentCost1 = (parseFloat(filamentCost.value.replace('£', '')) / 1000) * parseFloat(massInput.value);
             let wearCost = ((parseFloat(minutes.value) / 60) + parseFloat(hours.value)) * 0.1;
-            let labourCost = (minimumWage / 60) * 15;
+            let labourCost = (minimumWage / 60) * 20;
             mass = massInput.value;
 
             let totalCost = energyCost + filamentCost1 + wearCost + labourCost;
-            profit = totalCost * 1.6;
+            profit = totalCost * 1.8;
             profit = profit + parseFloat(shippingPrice.value.replace('£', ''));
-            profit = profit + 0.2;
+            profit = profit + 0.5;
             profit = profit * itemQuantity;
 
             if (isNaN(profit)) {
