@@ -22,6 +22,7 @@ html, body {
     padding: 0;
     font-family: 'Exo 2';
     background-color: var(--bg-primary);
+    overflow-x: hidden;
 }
 
 #headingDivDesktop, #headingDivMobile {
@@ -359,4 +360,44 @@ html, body {
 
 #nextBtn {
     margin-left: 5px;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+html.print-intro #content {
+    clip-path: inset(100% 0 0 0);
+}
+
+html.print-intro #footer {
+    opacity: 0;
+}
+
+#footer {
+    transition: opacity 0.4s;
+}
+
+#printHead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    will-change: transform;
+}
+
+#printHead img {
+    display: block;
+    filter: drop-shadow(0 0 6px var(--bg-secondary));
+}
+
+#printLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, var(--bg-secondary) 15%, var(--bg-secondary) 85%, transparent);
+    box-shadow: 0 0 14px var(--bg-secondary);
 }

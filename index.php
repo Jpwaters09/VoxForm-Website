@@ -4,6 +4,30 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            (function () {
+                var root = document.documentElement;
+        var nav = performance.getEntriesByType('navigation')[0];
+        var type = nav ? nav.type : 'navigate';
+
+        var left = 0;
+        try {
+            left = +sessionStorage.getItem('internalNav') || 0;
+            sessionStorage.removeItem('internalNav');
+        } catch (e) {}
+
+        var fromSite = type === 'navigate' && Date.now() - left < 5000;
+        var skip = fromSite || type === 'back_forward';
+        var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!skip && !reduced) {
+            root.classList.add('print-intro');
+            window.__printFailsafe = setTimeout(
+                function () { root.classList.remove('print-intro'); }, 5000);
+        }
+            })();
+        </script>
+        <script src="/Home/printIntro.js" defer></script>
         <link rel="stylesheet" href="/Home/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
         <script src="/Home/script.js"></script>

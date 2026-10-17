@@ -47,3 +47,7 @@ window.addEventListener('scroll', () => {
     document.getElementById("closeButton").classList.toggle('scrolled', scrolled);
     document.body.classList.toggle('scrolled', scrolled);
 });
+
+addEventListener('pagehide', () => {
+    sessionStorage.setItem('internalNav', Date.now());
+});
