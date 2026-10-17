@@ -83,41 +83,37 @@
                 <input type="number" id="quantity" value="1" max="10" min="1">
                 
                 <span id="materialsHeading">Material & Colour</span>
-
-                <span id="materialsInfo">Not sure which material to choose? Visit our <a href="/About" target="_blank">About page</a> to learn more about our filament materials.</span>
+                <span id="materialsInfo">Not sure which material to choose? Visit our <a href="/About" target="_blank">About page</a> to learn more about our filament materials. Please note: The physical print may differ slightly in colour compared to the preview.</span>
                 
                 <div id="materialOptions">
                     <div id="materials1">
                         <span id="boardMaterial">Board</span>
 
-                        <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
+                        <span id="ABSHeading">ABS</span>
+                        <span id="ABSDescription">Strong and heat resistant, suited for demanding applications</span>
                         <div id="ABSColours">
-                            <div class="ABSColour" onclick="filamentColour1('ABS', 'Grey')">
-                                <div id="ABSGrey1" class="ABSColourBtn" style="background-color: #8f949b;"></div>
-                                <span class="ABSColourText">Grey</span>
+                            <div id="ABSGreyBasic1" class="ABSColour" onclick="filamentColour1('ABS', 'Grey (Basic)')">
+                                <div class="ABSColourBtn" style="background-color: #8f949b;"></div>
+                                <span class="ABSColourText">Grey (Basic)</span>
                             </div>
                         </div>
                         
-                        <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
+                        <span id="PLAHeading">PLA</span>
+                        <span id="PLADescription">Great for detailed prints and everyday use</span>
                         <div id="PLAColours">
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'Black')">
-                                <div id="PLABlack1" class="PLAColourBtn" style="background-color: #000000;"></div>
-                                <span class="PLAColourText">Black</span>
+                            <div id="PLABlackBasic1" class="PLAColour" onclick="filamentColour1('PLA', 'Black (Basic)')">
+                                <div class="PLAColourBtn" style="background-color: #000000;"></div>
+                                <span class="PLAColourText">Black (Basic)</span>
                             </div>
 
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'White')">
-                                <div id="PLAWhite1" class="PLAColourBtn" style="background-color: #ffffff;"></div>
-                                <span class="PLAColourText">White</span>
+                            <div id="PLAWhiteBasic1" class="PLAColour" onclick="filamentColour1('PLA', 'White (Basic)')">
+                                <div class="PLAColourBtn" style="background-color: #ffffff;"></div>
+                                <span class="PLAColourText">White (Basic)</span>
                             </div>
 
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'Red')">
-                                <div id="PLARed1" class="PLAColourBtn" style="background-color: #ea140e;"></div>
-                                <span class="PLAColourText">Red</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour1('PLA', 'Blue')">
-                                <div id="PLABlue1" class="PLAColourBtn" style="background-color: #2240af;"></div>
-                                <span class="PLAColourText">Blue</span>
+                            <div id="PLAOliveGreenMatte1" class="PLAColour" onclick="filamentColour1('PLA', 'Olive Green (Matte)')">
+                                <div class="PLAColourBtn" style="background-color: #5a6d3d;"></div>
+                                <span class="PLAColourText">Olive Green (Matte)</span>
                             </div>
                         </div>
                     </div>
@@ -125,34 +121,31 @@
                     <div id="materials2">
                         <span id="piecesMaterial">Pieces</span>
 
-                        <span id="ABSHeading" title="Strong and heat resistant, suited for demanding applications">ABS</span>
+                        <span id="ABSHeading">ABS</span>
+                        <span id="ABSDescription">Strong and heat resistant, suited for demanding applications</span>
                         <div id="ABSColours">
-                            <div class="ABSColour" onclick="filamentColour2('ABS', 'Grey')">
-                                <div id="ABSGrey2" class="ABSColourBtn" style="background-color: #8f949b;"></div>
-                                <span class="ABSColourText">Grey</span>
+                            <div id="ABSGreyBasic2" class="ABSColour" onclick="filamentColour2('ABS', 'Grey (Basic)')">
+                                <div class="ABSColourBtn" style="background-color: #8f949b;"></div>
+                                <span class="ABSColourText">Grey (Basic)</span>
                             </div>
                         </div>
                         
-                        <span id="PLAHeading" title="Great for detailed prints and everyday use">PLA</span>
+                        <span id="PLAHeading">PLA</span>
+                        <span id="PLADescription">Great for detailed prints and everyday use</span>
                         <div id="PLAColours">
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'Black')">
-                                <div id="PLABlack2" class="PLAColourBtn" style="background-color: #000000;"></div>
-                                <span class="PLAColourText">Black</span>
+                            <div id="PLABlackBasic2" class="PLAColour" onclick="filamentColour2('PLA', 'Black (Basic)')">
+                                <div class="PLAColourBtn" style="background-color: #000000;"></div>
+                                <span class="PLAColourText">Black (Basic)</span>
                             </div>
 
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'White')">
-                                <div id="PLAWhite2" class="PLAColourBtn" style="background-color: #ffffff;"></div>
-                                <span class="PLAColourText">White</span>
+                            <div id="PLAWhiteBasic2" class="PLAColour" onclick="filamentColour2('PLA', 'White (Basic)')">
+                                <div class="PLAColourBtn" style="background-color: #ffffff;"></div>
+                                <span class="PLAColourText">White (Basic)</span>
                             </div>
 
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'Red')">
-                                <div id="PLARed2" class="PLAColourBtn" style="background-color: #ea140e;"></div>
-                                <span class="PLAColourText">Red</span>
-                            </div>
-
-                            <div class="PLAColour" onclick="filamentColour2('PLA', 'Blue')">
-                                <div id="PLABlue2" class="PLAColourBtn" style="background-color: #2240af;"></div>
-                                <span class="PLAColourText">Blue</span>
+                            <div id="PLAOliveGreenMatte2" class="PLAColour" onclick="filamentColour2('PLA', 'Olive Green (Matte)')">
+                                <div class="PLAColourBtn" style="background-color: #5a6d3d;"></div>
+                                <span class="PLAColourText">Olive Green (Matte)</span>
                             </div>
                         </div>
                     </div>

@@ -188,6 +188,53 @@ html, body {
     color: var(--purple);
 }
 
+#ABSHeading, #PLAHeading {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#ABSDescription, #PLADescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#ABSColours, #PLAColours {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ABSColour, .PLAColour {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.ABSColourBtn, .PLAColourBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ABSColourText, .PLAColourText {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
 #shipping {
     appearance: none;
     background-color: var(--btn-secondary);
@@ -230,50 +277,6 @@ html, body {
 #shipping:focus, #shipping:hover {
     background-color: var(--btn-secondary-hover);
     border-color: var(--cyan);
-}
-
-#ABSHeading, #PLAHeading {
-    color: var(--text-primary);
-    font-size: 18px;
-    margin-bottom: 10px;
-    cursor: help;
-}
-
-#ABSColours {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-#PLAColours {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.ABSColour, .PLAColour {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.ABSColourBtn, .PLAColourBtn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    outline-offset: 2px;
-    outline: 2px solid #00000000;
-    transition: outline 0.3s ease;
-}
-
-.ABSColourText, .PLAColourText {
-    color: var(--text-secondary);
-    font-size: 14px;
 }
 
 #descriptionText {

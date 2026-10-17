@@ -118,14 +118,6 @@
                 <div id="carousel">
                     <div id="carouselTrack">
                         <div class="productCard">
-                            <img class="productImage" src="/Assets/Images/Product/Circuit Board Ruler/Image 1.webp" alt="Circuit Board Ruler">
-                            <span class="productTitle">Circuit Board Ruler</span>
-                            <span class="productDescription">A real printed circuit board (PCB) ruler, perfect for electronics enthusiasts and hobbyists.</span>
-                            <span class="productPrice">£3.50</span>
-                            <button class="orderBtn" onclick="window.location.href = '/Shop/Circuit%20Board%20Ruler/'">Order</button>
-                        </div>
-
-                        <div class="productCard">
                             <img class="productImage" src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
                             <span class="productTitle">Dart Holder</span>
                             <span class="productDescription">A simple holder perfect for keeping a full set of darts organised and ready to throw.</span>

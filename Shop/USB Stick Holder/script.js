@@ -212,73 +212,76 @@ function closeOrderPopup() {
 }
 
 function filamentColour(material, colour) {
-    let ABSGrey = document.getElementById("ABSGrey");
-    let PLABlack = document.getElementById("PLABlack");
-    let PLAWhite = document.getElementById("PLAWhite");
-    let PLARed = document.getElementById("PLARed");
-    let PLABlue = document.getElementById("PLABlue");
+    let ABSGreyBasic = document.getElementById("ABSGreyBasic");
+    let PLABlackBasic = document.getElementById("PLABlackBasic");
+    let PLAWhiteBasic = document.getElementById("PLAWhiteBasic");
+    let PLAOliveGreenMatte = document.getElementById("PLAOliveGreenMatte");
 
     if (material == "ABS") {
-        if (colour == "Grey") {
-            ABSGrey.style.outline = "2px solid #ffffff31";
+        if (colour == "Grey (Basic)") {
+            ABSGreyBasic.style.backgroundColor = "var(--btn-primary)";
+            ABSGreyBasic.style.border = "1px solid var(--cyan)";
 
-            PLABlack.style.outline = "2px solid #00000000";
-            PLAWhite.style.outline = "2px solid #00000000";
-            PLARed.style.outline = "2px solid #00000000";
-            PLABlue.style.outline = "2px solid #00000000";
+            PLABlackBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLAWhiteBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLAOliveGreenMatte.style.backgroundColor = "var(--btn-secondary)";
+
+            PLABlackBasic.style.border = "1px solid var(--border)";
+            PLAWhiteBasic.style.border = "1px solid var(--border)";
+            PLAOliveGreenMatte.style.border = "1px solid var(--border)";
 
             selectedFilamentType = "ABS";
-            selectedFilamentColour = "Grey";
+            selectedFilamentColour = "Grey (Basic)";
         }
     }
 
     if (material == "PLA") {
-        if (colour == "Black") {
-            PLABlack.style.outline = "2px solid #ffffff31";
+        if (colour == "Black (Basic)") {
+            PLABlackBasic.style.backgroundColor = "var(--btn-primary)";
+            PLABlackBasic.style.border = "1px solid var(--cyan)";
 
-            ABSGrey.style.outline = "2px solid #00000000";
-            PLAWhite.style.outline = "2px solid #00000000";
-            PLARed.style.outline = "2px solid #00000000";
-            PLABlue.style.outline = "2px solid #00000000";
+            ABSGreyBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLAWhiteBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLAOliveGreenMatte.style.backgroundColor = "var(--btn-secondary)";
+
+            ABSGreyBasic.style.border = "1px solid var(--border)";
+            PLAWhiteBasic.style.border = "1px solid var(--border)";
+            PLAOliveGreenMatte.style.border = "1px solid var(--border)";
 
             selectedFilamentType = "PLA";
-            selectedFilamentColour = "Black";
+            selectedFilamentColour = "Black (Basic)";
         }
 
-        if (colour == "White") {
-            PLAWhite.style.outline = "2px solid #ffffff31";
+        if (colour == "White (Basic)") {
+            PLAWhiteBasic.style.backgroundColor = "var(--btn-primary)";
+            PLAWhiteBasic.style.border = "1px solid var(--cyan)";
 
-            ABSGrey.style.outline = "2px solid #00000000";
-            PLABlack.style.outline = "2px solid #00000000";
-            PLARed.style.outline = "2px solid #00000000";
-            PLABlue.style.outline = "2px solid #00000000";
+            ABSGreyBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLABlackBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLAOliveGreenMatte.style.backgroundColor = "var(--btn-secondary)";
+
+            ABSGreyBasic.style.border = "1px solid var(--border)";
+            PLABlackBasic.style.border = "1px solid var(--border)";
+            PLAOliveGreenMatte.style.border = "1px solid var(--border)";
 
             selectedFilamentType = "PLA";
-            selectedFilamentColour = "White";
+            selectedFilamentColour = "White (Basic)";
         }
 
-        if (colour == "Red") {
-            PLARed.style.outline = "2px solid #ffffff31";
+        if (colour == "Olive Green (Matte)") {
+            PLAOliveGreenMatte.style.backgroundColor = "var(--btn-primary)";
+            PLAOliveGreenMatte.style.border = "1px solid var(--cyan)";
 
-            ABSGrey.style.outline = "2px solid #00000000";
-            PLABlack.style.outline = "2px solid #00000000";
-            PLAWhite.style.outline = "2px solid #00000000";
-            PLABlue.style.outline = "2px solid #00000000";
+            ABSGreyBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLABlackBasic.style.backgroundColor = "var(--btn-secondary)";
+            PLAWhiteBasic.style.backgroundColor = "var(--btn-secondary)";
 
-            selectedFilamentType = "PLA";
-            selectedFilamentColour = "Red";
-        }
-
-        if (colour == "Blue") {
-            PLABlue.style.outline = "2px solid #ffffff31";
-
-            ABSGrey.style.outline = "2px solid #00000000";
-            PLABlack.style.outline = "2px solid #00000000";
-            PLAWhite.style.outline = "2px solid #00000000";
-            PLARed.style.outline = "2px solid #00000000";
+            ABSGreyBasic.style.border = "1px solid var(--border)";
+            PLABlackBasic.style.border = "1px solid var(--border)";
+            PLAWhiteBasic.style.border = "1px solid var(--border)";
 
             selectedFilamentType = "PLA";
-            selectedFilamentColour = "Blue";
+            selectedFilamentColour = "Olive Green (Matte)";
         }
     }
 }
