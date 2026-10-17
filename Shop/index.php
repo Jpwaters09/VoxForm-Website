@@ -27,12 +27,6 @@
             <h1 id="subheading">Browse our catalogue</h1>
 
             <div id="productsCard">
-                <div onclick="window.location.href = '/Shop/Circuit%20Board%20Ruler/'">
-                    <img src="/Assets/Images/Product/Circuit Board Ruler/Image 1.webp" alt="Circuit Board Ruler">
-                    <span class="productName">Circuit Board Ruler</span>
-                    <span class="productPrice">£3.50</span>
-                </div>
-
                 <div onclick="window.location.href = '/Shop/Dart%20Holder/'">
                     <img src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
                     <span class="productName">Dart Holder</span>

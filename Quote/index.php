@@ -38,7 +38,7 @@
         </script>
     </head>
     <body>
-        <!-- <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div> -->
+        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 
         <div id="content">
             <span id="heading">Get a Quote</span>
@@ -169,6 +169,6 @@ Note: We print your files as supplied and don't offer modelling or design change
             <div id="dim" style="display: none;"></div>
         </div>
 
-        <!-- <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div> -->
+        <div id="footer"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Footer/index.html'; ?></div>
     </body>
 </html>
