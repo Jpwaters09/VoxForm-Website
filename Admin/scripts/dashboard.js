@@ -363,66 +363,67 @@ function calculatePrice() {
     let shippingPrice = document.getElementById("shippingPrice");
     let fixedPriceBox = document.getElementById("fixedPriceBox");
     let massInput = document.getElementById("mass");
+    let mode = document.getElementById("priceCalcSelect").selectedIndex;
 
-    const energyCostPerHour = 0.16;
-    const minimumWage = 15;
+    const ENERGY_PER_HOUR = 0.16;
+    const WEAR_PER_HOUR = 1.0;
+    const LABOUR_RATE = 15;
+    const LABOUR_MINUTES = 20;
+    const FILAMENT_WASTE = 1.1;
+    const FAILURE_ALLOWANCE = 1.1;
+    const MARKUP = 1.8;
+    const FIXED_FEE = 0.75;
 
-    let priceCalcSelect = document.getElementById("priceCalcSelect").selectedIndex;
+    const toNum = v => parseFloat(String(v ?? "").replace("£", ""));
+    const toNumOrZero = v => toNum(v) || 0;
 
-    if (priceCalcSelect == 1) {
-        profit = parseFloat(fixedPriceBox.value.replace('£', '')) + parseFloat(shippingPrice.value.replace('£', ''));
-        profit = profit + 0.5;
-        profit = profit * itemQuantity;
+    const quantity = Number(itemQuantity) || 1;
+    const shipping = shippingPrice ? toNumOrZero(shippingPrice.value) : 0;
 
-        if (isNaN(profit)) {
-            profit = "0.00";
-        }
+    let unitPrice = NaN;
+    let massText = "N/A";
 
-        else {
-            profit = profit.toFixed(2);
-        }
+    if (mode == 1) {
+        if (!fixedPriceBox) return;
 
-        shippingCost = parseFloat(shippingPrice.value.replace('£', '')).toFixed(2);
-        itemCost = parseFloat(fixedPriceBox.value.replace('£', '')).toFixed(2);
-        totalPrice = profit;
-        mass = "N/A";
-
-        document.getElementById("totalPrice").innerHTML = `Total Price: <strong>£${profit}</strong>`;
+        unitPrice = toNum(fixedPriceBox.value);
     }
 
-    if (priceCalcSelect == 2) {
-        if (hours && minutes && filamentCost && massInput) {
-            let energyCost = ((parseFloat(minutes.value) / 60) + parseFloat(hours.value)) * energyCostPerHour;
-            let filamentCost1 = (parseFloat(filamentCost.value.replace('£', '')) / 1000) * parseFloat(massInput.value) * 1.1;
-            let wearCost = ((parseFloat(minutes.value) / 60) + parseFloat(hours.value)) * 0.8;
-            let labourCost = (minimumWage / 60) * 20;
-            mass = massInput.value;
+    else if (mode == 2) {
+        if (!(hours && minutes && filamentCost && massInput)) return;
 
-            let totalCost = energyCost + filamentCost1 + wearCost + labourCost;
-            profit = totalCost * 1.8;
-            profit = profit + parseFloat(shippingPrice.value.replace('£', ''));
-            profit = profit + 0.75;
-            profit = profit * itemQuantity;
+        const printHours = toNumOrZero(hours.value) + toNumOrZero(minutes.value) / 60;
+        const grams = toNum(massInput.value);
+        const pricePerKg = toNum(filamentCost.value);
 
-            if (isNaN(profit)) {
-                profit = "0.00";
-                shippingCost = null;
-                itemCost = null;
-                totalPrice = null;
-            }
+        if (printHours > 0 && grams > 0 && isFinite(pricePerKg)) {
+            const energyCost = printHours * ENERGY_PER_HOUR;
+            const wearCost = printHours * WEAR_PER_HOUR;
+            const material = (pricePerKg / 1000) * grams * FILAMENT_WASTE;
+            const labourCost = (LABOUR_RATE / 60) * LABOUR_MINUTES;
 
-            else {
-                profit = profit.toFixed(2);
-            }
+            const unitCost = (energyCost + wearCost + material) * FAILURE_ALLOWANCE + labourCost;
 
-            shippingCost = parseFloat(shippingPrice.value.replace('£', '')).toFixed(2);
-
-            itemCost = (totalCost * 1.6).toFixed(2);
-            totalPrice = profit;
-
-            document.getElementById("totalPrice").innerHTML = `Total Price: <strong>£${profit}</strong>`;
+            unitPrice = unitCost * MARKUP;
         }
+
+        massText = massInput.value;
     }
+
+    else {
+        return;
+    }
+
+    const valid = isFinite(unitPrice) && unitPrice > 0;
+    const itemTotal = unitPrice * quantity;
+    const total = valid ? itemTotal + shipping + FIXED_FEE : 0;
+
+    mass = massText;
+    shippingCost = valid ? shipping.toFixed(2) : null;
+    itemCost = valid ? itemTotal.toFixed(2) : null;
+    totalPrice = total.toFixed(2);
+
+    document.getElementById("totalPrice").innerHTML = `Total Price: <strong>£${totalPrice}</strong>`;
 }
 
 async function submitQuote() {
