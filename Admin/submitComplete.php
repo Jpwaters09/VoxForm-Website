@@ -28,7 +28,7 @@ $orderId = $data["assignOrderNumber"];
 $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$pdo->prepare("UPDATE Orders SET status = 'Completed' WHERE order_id = ?")
+$pdo->prepare("UPDATE Orders SET status = 'Completed', delivered_at = NOW() WHERE order_id = ?")
     ->execute([$orderId]);
 
 $stmt = $pdo->prepare("SELECT * FROM Orders WHERE order_id = ?");
@@ -92,6 +92,15 @@ $mail->setFrom($_ENV['EMAIL_USERNAME_NOREPLY'], 'VoxForm No-Reply');
 $mail->addAddress($order['email']);
 $mail->addReplyTo($_ENV['EMAIL_USERNAME_CONTACT']);
 
+$structuredData = '
+<script type="application/json+trustpilot">
+{
+"recipientName": "' . htmlspecialchars($order['name']) . '",
+"recipientEmail": "' . htmlspecialchars($order['email']) . '",
+"referenceId": "' . htmlspecialchars($order['order_id']) . '"
+}
+</script>';
+
 $html = file_get_contents('/home/www/public/Email Templates/submitComplete.html');
 
 $body = str_replace(
@@ -104,6 +113,7 @@ $body = str_replace(
 );
 
 $mail->Body = $body . $structuredData;
+$mail->addBCC($_ENV['EMAIL_TRUSTPILOT']);
 $mail->isHTML(true);
 $mail->CharSet = 'UTF-8';
 $mail->Encoding = 'quoted-printable';

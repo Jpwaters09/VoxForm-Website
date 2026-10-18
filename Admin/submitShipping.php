@@ -137,15 +137,6 @@ $mail->setFrom($_ENV['EMAIL_USERNAME_NOREPLY'], 'VoxForm No-Reply');
 $mail->addAddress($order['email']);
 $mail->addReplyTo($_ENV['EMAIL_USERNAME_CONTACT']);
 
-$structuredData = '
-<script type="application/json+trustpilot">
-{
-"recipientName": "' . htmlspecialchars($order['name']) . '",
-"recipientEmail": "' . htmlspecialchars($order['email']) . '",
-"referenceId": "' . htmlspecialchars($order['order_id']) . '"
-}
-</script>';
-
 $html = file_get_contents('/home/www/public/Email Templates/submitShipping.html');
 
 $body = str_replace(
@@ -184,8 +175,7 @@ $body = str_replace(
         $html
     );
 
-$mail->Body = $body . $structuredData;
-$mail->addBCC($_ENV['EMAIL_TRUSTPILOT']);
+$mail->Body = $body;
 $mail->isHTML(true);
 $mail->CharSet = 'UTF-8';
 $mail->Encoding = 'quoted-printable';
