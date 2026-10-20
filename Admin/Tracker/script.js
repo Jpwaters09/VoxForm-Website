@@ -1,5 +1,7 @@
 let currentUser = null;
 let isManager = null;
+let lastMonthStart;
+let currentIncomeId = null;
 
 async function init() {
     const res = await fetch('../login.php');
@@ -53,7 +55,7 @@ async function loadIncome() {
         }
     });
 
-    const lastMonthStart = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+    lastMonthStart = new Date(today.getFullYear(), today.getMonth() - 1, 1);
     const thisMonthStart = new Date(today.getFullYear(), today.getMonth(), 1);
     const nextMonthStart = new Date(today.getFullYear(), today.getMonth() + 1, 1);
 
@@ -124,7 +126,7 @@ async function loadIncome() {
         tr.appendChild(orderType);
         tr.appendChild(orderDate);
 
-        tr.onclick = () => editIncome(i.id);
+        tr.onclick = () => addIncome(i.id, i.reference, i.description, i.taker_partner, i.print_partner, i.channel, parseFloat(i.price_pence / 100), parseFloat(i.shipping_price_pence / 100), parseFloat(i.cost_pence / 100), formatPrice.format(parseFloat(i.profit_pence / 100)), i.order_type, new Date(i.order_date).toLocaleDateString('en-CA'));
 
         incomeId.textContent = i.id;
         reference.textContent = i.reference;
@@ -137,7 +139,7 @@ async function loadIncome() {
         costs.textContent = formatPrice.format(parseFloat(i.cost_pence / 100));
         profit.textContent = formatPrice.format(parseFloat(i.profit_pence / 100));
         orderType.textContent = i.order_type;
-        orderDate.textContent = i.order_date;
+        orderDate.textContent = new Date(i.order_date).toLocaleDateString('en-CA');
 
         let profit1 = parseInt(i.profit_pence);
 
@@ -299,6 +301,193 @@ async function loadIncome() {
     }
 }
 
-async function editIncome(incomeId) {
+function addIncome(incomeId = null, reference = null, description = null, tookBy = "", printedBy = "", channel = "", price = null, shippingPrice = null, costs = null, profit = null, orderType = "", orderDate = null) {
+    let incomePopup = document.getElementById("incomePopup");
+    let dim = document.getElementById("dim");
 
+    let referenceInput = document.getElementById("referenceInput");
+    let descriptionInput = document.getElementById("descriptionInput");
+    let tookBySelect = document.getElementById("tookBySelect");
+    let printedBySelect = document.getElementById("printedBySelect");
+    let channelSelect = document.getElementById("channelSelect");
+    let itemPriceInput = document.getElementById("itemPriceInput");
+    let shippingPriceInput = document.getElementById("shippingPriceInput");
+    let costsPriceInput = document.getElementById("costsPriceInput");
+    let incomePopupProfit = document.getElementById("incomePopupProfit");
+    let orderTypeSelect = document.getElementById("orderTypeSelect");
+    let orderDateInput = document.getElementById("orderDateInput");
+
+    currentIncomeId = incomeId;
+
+    if (incomeId) {
+        document.getElementById("deleteIncomeBtn").style.display = "";
+    }
+
+    else {
+        document.getElementById("deleteIncomeBtn").style.display = "none";
+    }
+
+    referenceInput.value = reference;
+    descriptionInput.value = description;
+    tookBySelect.value = tookBy;
+    printedBySelect.value = printedBy;
+    channelSelect.value = channel;
+    if (profit) {
+        incomePopupProfit.innerHTML = `Profit: <strong>${profit}</strong>`;
+    }
+
+    else {
+        incomePopupProfit.innerHTML = `Profit: <strong>£0.00</strong>`;
+    }
+    itemPriceInput.value = price;
+    shippingPriceInput.value = shippingPrice;
+    costsPriceInput.value = costs;
+    orderTypeSelect.value = orderType;
+    orderDateInput.value = orderDate;
+
+    dim.style.display = "";
+    incomePopup.style.display = "";
+}
+
+async function logIncome1() {
+    let referenceInput = document.getElementById("referenceInput").value;
+    let descriptionInput = document.getElementById("descriptionInput").value;
+    let tookBySelect = document.getElementById("tookBySelect").value;
+    let printedBySelect = document.getElementById("printedBySelect").value;
+    let channelSelect = document.getElementById("channelSelect").value;
+    let itemPriceInput = parseFloat(document.getElementById("itemPriceInput").value);
+    let shippingPriceInput = parseFloat(document.getElementById("shippingPriceInput").value);
+    let costsPriceInput = parseFloat(document.getElementById("costsPriceInput").value);
+    let orderTypeSelect = document.getElementById("orderTypeSelect").value;
+    let orderDateInput = document.getElementById("orderDateInput").value;
+
+    if (!referenceInput || !descriptionInput || !tookBySelect || !printedBySelect || !channelSelect || !itemPriceInput || !shippingPriceInput || !costsPriceInput || !orderTypeSelect || !orderDateInput) {
+        alert("Please fill in all fields.");
+        
+        return;
+    }
+
+    let profit = itemPriceInput - (shippingPriceInput + costsPriceInput);
+
+    const formData = new FormData();
+
+    formData.append("id", currentIncomeId);
+    formData.append("reference", referenceInput);
+    formData.append("description", descriptionInput);
+    formData.append("took_by", tookBySelect);
+    formData.append("printed_by", printedBySelect);
+    formData.append("channel", channelSelect);
+    formData.append("item_price", parseInt(itemPriceInput * 100));
+    formData.append("shipping_price", parseInt(shippingPriceInput * 100));
+    formData.append("costs_price", parseInt(costsPriceInput * 100));
+    formData.append("profit", parseInt(profit * 100));
+    formData.append("order_type", orderTypeSelect);
+    formData.append("order_date", orderDateInput);
+
+    const response = await fetch("../logIncome1.php", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        cancelLogIncome();
+        updateIncome();
+    }
+
+    else {
+        alert("Error saving income log. Please try again.");
+    }
+}
+
+async function deleteLogIncome() {
+    const res = await fetch('../deleteIncome.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({currentIncomeId})
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+        cancelLogIncome();
+        updateIncome();
+    }
+
+    else {
+        alert("Error deleting income log. Please try again.")
+    }
+}
+
+function profitInputChanged() {
+    let itemPriceInput = parseFloat(document.getElementById("itemPriceInput").value);
+    let shippingPriceInput = parseFloat(document.getElementById("shippingPriceInput").value);
+    let costsPriceInput = parseFloat(document.getElementById("costsPriceInput").value);
+    let incomePopupProfit = document.getElementById("incomePopupProfit");
+
+    let profit = formatPrice.format(itemPriceInput - (shippingPriceInput + costsPriceInput));
+
+    incomePopupProfit.innerHTML = `Profit: <strong>${profit}</strong>`;
+}
+
+function logIncome() {
+    let logIncomePopup = document.getElementById("logIncomePopup");
+    let dim = document.getElementById("dim");
+
+    dim.style.display = "";
+    logIncomePopup.style.display = "";
+}
+
+async function logPayment() {
+    let readCheckbox = document.getElementById("readCheckbox").checked;
+
+    if (readCheckbox) {
+        let curUsr = currentUser.username;
+        let incomeDate = lastMonthStart.toLocaleDateString('en-CA');
+
+        const res = await fetch('../logIncome.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({curUsr, incomeDate})
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+            cancelLog();
+            updateIncome();
+        }
+
+        else {
+            alert("Error logging payment. Please try again.")
+        }
+    }
+
+    else {
+        alert("Please check the checkbox to confirm that you have sent the required payments to each partner.")
+    }
+}
+
+function cancelLog() {
+    let logIncomePopup = document.getElementById("logIncomePopup");
+    let dim = document.getElementById("dim");
+
+    dim.style.display = "none";
+    logIncomePopup.style.display = "none";
+}
+
+function updateIncome() {
+    document.getElementById("incomeTableBody").innerHTML = "";
+    loadIncome();
+}
+
+function cancelLogIncome() {
+    let incomePopup = document.getElementById("incomePopup");
+    let dim = document.getElementById("dim");
+
+    dim.style.display = "none";
+    incomePopup.style.display = "none";
+
+    currentIncomeId = null;
 }

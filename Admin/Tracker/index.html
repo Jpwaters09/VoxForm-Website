@@ -52,7 +52,7 @@
                     <span id="jwSen" class="payoutDescription" style="display: none;"></span>
                     <span id="mtSen" class="payoutDescription" style="display: none;"></span>
                     <span id="jcSen" class="payoutDescription" style="display: none;"></span>
-                    <button id="logPaymentsBtn" style="display: none;">Log Payments</button>
+                    <button onclick="logIncome()" id="logPaymentsBtn" style="display: none;">Log Payments</button>
                 </div>
                 <div>
                     <span id="profit" class="payoutTitle"></span>
@@ -60,6 +60,20 @@
                     <span id="mtProfit" class="payoutDescription"></span>
                     <span id="jcProfit" class="payoutDescription"></span>
                 </div>
+            </div>
+
+            <button id="addBtn" onclick="addIncome()">Log Income</button>
+
+            <div id="logIncomePopup" style="display: none;">
+                <span id="logIncomeTitle">Log Payment</span>
+
+                <div id="readCheckboxDiv">
+                    <input type="checkbox" id="readCheckbox">
+                    <span id="readCheckboxText">I confirm that I have sent the required payments to each partner.</span>
+                </div>
+
+                <button id="logIncomeMonthBtn" onclick="logPayment()">Log Payment</button>
+                <button id="cancelIncomeMonthBtn" onclick="cancelLog()">Cancel</button>
             </div>
 
             <div id="incomeListDiv">
@@ -82,6 +96,65 @@
                     </thead>
                     <tbody id="incomeTableBody"></tbody>
                 </table>
+            </div>
+
+            <div id="incomePopup" style="display: none;">
+                <span id="incomePopupTitle">Log Income</span>
+
+                <span class="incomePopupDescription">Reference</span>
+                <input id="referenceInput" class="incomePopupInput" type="text" placeholder="Reference (order number, payment ID)">
+
+                <span class="incomePopupDescription">Description</span>
+                <input id="descriptionInput" class="incomePopupInput" type="text" placeholder="Description (Item name / details)">
+
+                <span class="incomePopupDescription">Took By</span>
+                <select id="tookBySelect" class="incomePopupSelect">
+                    <option value="" selected disabled>Took By</option>
+                    <option value="Jacob Waters">Jacob Waters</option>
+                    <option value="Matthew Taylor">Matthew Taylor</option>
+                    <option value="James Colley">James Colley</option>
+                </select>
+
+                <span class="incomePopupDescription">Printed By</span>
+                <select id="printedBySelect" class="incomePopupSelect">
+                    <option value="" selected disabled>Printed By</option>
+                    <option value="All">All</option>
+                    <option value="Jacob Waters">Jacob Waters</option>
+                    <option value="Matthew Taylor">Matthew Taylor</option>
+                    <option value="James Colley">James Colley</option>
+                </select>
+
+                <span class="incomePopupDescription">Channel</span>
+                <select id="channelSelect" class="incomePopupSelect">
+                    <option value="" selected disabled>Channel</option>
+                    <option value="Website">Website</option>
+                    <option value="Vinted">Vinted</option>
+                    <option value="eBay">eBay</option>
+                </select>
+                
+                <span id="incomePopupProfit"></span>
+                <span class="incomePopupDescription">Item Price</span>
+                <input class="incomePopupInput" type="number" id="itemPriceInput" placeholder="Item Price" onkeyup="profitInputChanged()">
+
+                <span class="incomePopupDescription">Shipping Price</span>
+                <input class="incomePopupInput" type="number" id="shippingPriceInput" placeholder="Shipping Price" onkeyup="profitInputChanged()">
+
+                <span class="incomePopupDescription">Costs Price</span>
+                <input class="incomePopupInput" type="number" id="costsPriceInput" placeholder="Costs Price" onkeyup="profitInputChanged()">
+                
+                <span class="incomePopupDescription">Order Type</span>
+                <select id="orderTypeSelect" class="incomePopupSelect">
+                    <option value="" selected disabled>Order Type</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Big">Big</option>
+                </select>
+
+                <span class="incomePopupDescription">Order Date</span>
+                <input class="incomePopupInput" type="date" id="orderDateInput">
+
+                <button id="logIncomeBtn" onclick="logIncome1()">Log</button>
+                <button id="deleteIncomeBtn" onclick="deleteLogIncome()" style="display: none;">Delete</button>
+                <button id="cancelIncomeBtn" onclick="cancelLogIncome()">Cancel</button>
             </div>
 
             <div id="dim" style="display: none;"></div>

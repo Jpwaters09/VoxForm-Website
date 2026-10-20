@@ -415,8 +415,8 @@ function calculatePrice() {
     }
 
     const valid = isFinite(unitPrice) && unitPrice > 0;
-    const itemTotal = unitPrice * quantity;
-    const total = valid ? itemTotal + shipping + FIXED_FEE : 0;
+    const itemTotal = unitPrice * quantity + FIXED_FEE;
+    const total = valid ? itemTotal + shipping : 0;
 
     mass = massText;
     shippingCost = valid ? shipping.toFixed(2) : null;

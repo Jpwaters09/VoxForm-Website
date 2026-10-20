@@ -268,7 +268,6 @@ html, body {
     border-radius: 10px;
     padding: 20px;
     border: 1px solid var(--border);
-    margin-bottom: 20px;
 }
 
 .payoutTitle {
@@ -297,7 +296,171 @@ html, body {
     margin-top: 20px;
 }
 
-#logPaymentsBtn:hover {
+#addBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    align-self: start;
+    margin-left: 20px;
+}
+
+#logPaymentsBtn:hover, #addBtn:hover {
     background-color: var(--btn-primary-hover);
     border-color: var(--cyan);
+}
+
+#logIncomePopup {
+    position: fixed;
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    top: 150px;
+    max-width: 700px;
+    bottom: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#incomePopup {
+    position: fixed;
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    top: 30px;
+    max-width: 700px;
+    bottom: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    overflow-x: hidden;
+}
+
+#incomePopupTitle, #logIncomeTitle {
+    color: var(--text-primary);
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.incomePopupInput {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    outline: none;
+    caret-color: var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    width: 350px;
+}
+
+.incomePopupSelect {
+    appearance: none;
+    background-color: var(--btn-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Exo 2";
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
+    background-image: url("/Assets/Images/Arrow Down.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    height: 45px;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.incomePopupInput:focus, .incomePopupInput:hover, .incomePopupSelect:focus, .incomePopupSelect:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#incomePopupProfit {
+    color: var(--text-secondary);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#logIncomeBtn, #logIncomeMonthBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    align-self: start;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#logIncomeBtn:hover, #logIncomeMonthBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#cancelIncomeBtn, #cancelIncomeMonthBtn, #deleteIncomeBtn {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    align-self: start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#cancelIncomeBtn:hover, #cancelIncomeMonthBtn:hover, #deleteIncomeBtn:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#readCheckboxDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#readCheckboxText {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#readCheckbox {
+    accent-color: var(--cyan);
+}
+
+.incomePopupDescription {
+    color: var(--text-secondary);
+    font-size: 18px;
+    margin-bottom: 10px;
 }
