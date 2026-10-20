@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <link rel="stylesheet" href="/Admin/Tracker/styles.css">
+        <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/x-icon">
+        <script src="/Admin/Tracker/script.js" defer></script>
+        <link rel="manifest" href="/manifest.json">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/png" href="/Assets/Favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/Assets/Favicon/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="VoxForm Admin" />
+        <link rel="manifest" href="/Assets/Favicon/site.webmanifest" />
+        <meta name="robots" content="noindex"/>
+        <title>Tracker | VoxForm</title>
+    </head>
+    <body>
+        <div id="header">
+            <img id="headerLogo" src="/Assets/Images/Logo.png" alt="VoxForm Logo">
+
+            <div id="userDiv">
+                <span id="usernameText"></span>
+                <a id="logoutBtn" href="../logout.php">Logout</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="filters">
+                <div id="pageBtns">
+                    <button class="unselectedPage" onclick="window.location.href = '/Admin/dashboard.html'">Dashboard</button>
+                    <button class="selectedPage" onclick="window.location.href = '/Admin/Tracker/'">Tracker</button>
+                </div>
+
+                <div id="filterBtns">
+                    <button onclick="filter('income')" class="selectedFilter" id="filterIncome">Income</button>
+                    <button onclick="filter('expenses')" class="unSelectedFilter" id="filterExpenses">Expenses</button>
+                </div>
+            </div>
+
+            <div id="payoutCards">
+                <div>
+                    <span id="receiving" class="payoutTitle"></span>
+                    <span id="jwRec" class="payoutDescription"></span>
+                    <span id="mtRec" class="payoutDescription"></span>
+                    <span id="jcRec" class="payoutDescription"></span>
+                </div>
+                <div>
+                    <span id="sending" class="payoutTitle"></span>
+                    <span id="jwSen" class="payoutDescription" style="display: none;"></span>
+                    <span id="mtSen" class="payoutDescription" style="display: none;"></span>
+                    <span id="jcSen" class="payoutDescription" style="display: none;"></span>
+                    <button id="logPaymentsBtn" style="display: none;">Log Payments</button>
+                </div>
+                <div>
+                    <span id="profit" class="payoutTitle"></span>
+                    <span id="jwProfit" class="payoutDescription"></span>
+                    <span id="mtProfit" class="payoutDescription"></span>
+                    <span id="jcProfit" class="payoutDescription"></span>
+                </div>
+            </div>
+
+            <div id="incomeListDiv">
+                <table id="incomeList">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Reference</th>
+                            <th>Description</th>
+                            <th>Took By</th>
+                            <th>Printed By</th>
+                            <th>Channel</th>
+                            <th>Price</th>
+                            <th>Shipping Price</th>
+                            <th>Costs</th>
+                            <th>Profit</th>
+                            <th>Order Type</th>
+                            <th>Order Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="incomeTableBody"></tbody>
+                </table>
+            </div>
+
+            <div id="dim" style="display: none;"></div>
+        </div>
+    </body>
+</html>

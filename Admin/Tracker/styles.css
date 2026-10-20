@@ -1,0 +1,303 @@
+:root {
+    --bg-primary: #0d1b2e;
+    --bg-secondary: #111e30;
+    --border: #1a2d45;
+    --text-primary: #ffffff;
+    --text-secondary: #8ba4bc;
+    --cyan: #00c8d4;
+    --purple: #6b5fd6;
+    --btn-primary: #0A4F6E;
+    --btn-primary-hover: #083D56;
+    --btn-secondary: #111E30;
+    --btn-secondary-hover: #0D1825;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url("/Assets/Fonts/Exo 2.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2';
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0px 0px 5px 0.5px var(--border);
+    padding: 20px;
+}
+
+#headerLogo {
+    width: 100px;
+}
+
+@media (min-width: 769px) {
+    #userDiv {
+        margin-left: auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #userDiv {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+#usernameText {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+#logoutBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    text-decoration: none;
+    outline: none;
+}
+
+#logoutBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#filters {
+    display: flex;
+    flex-direction: column;
+}
+
+#filterBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+#pageBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 20px;
+    gap: 20px;
+}
+
+#pageBtns .selectedPage {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#pageBtns .selectedPage:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+#pageBtns .unselectedPage {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+}
+
+#pageBtns .unselectedPage:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#dim {
+    background-color: #000000b6;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.selectedFilter {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    height: 100%;
+}
+
+.unSelectedFilter {
+    color: var(--cyan);
+    background-color: var(--btn-secondary);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    height: 100%;
+}
+
+.selectedFilter:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}
+
+.unSelectedFilter:hover {
+    background-color: var(--btn-secondary-hover);
+    border-color: var(--cyan);
+}
+
+#incomeListDiv {
+    display: flex;
+    width: 95%;
+    height: 30vh;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+#incomeList {
+    width: 100%;
+    border-collapse: collapse;
+    align-self: flex-start;
+}
+
+#incomeList tr {
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#incomeList tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#incomeList tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#incomeList th {
+    color: var(--text-primary);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#incomeList td {
+    color: var(--text-secondary);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#incomeList tbody tr {
+    cursor: pointer;
+    height: 45px;
+}
+
+#incomeList tbody tr:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+#payoutCards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#payoutCards div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.payoutTitle {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.payoutDescription {
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-align: center;
+}
+
+#logPaymentsBtn {
+    color: var(--cyan);
+    background-color: var(--btn-primary);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: "Exo 2";
+    margin-top: 20px;
+}
+
+#logPaymentsBtn:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--cyan);
+}

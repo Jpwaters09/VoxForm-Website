@@ -24,7 +24,7 @@
 
         <div id="content">
             <h1 id="heading">Legal & Policies</h1>
-            <span id="lastUpdated">Last Updated: 14th June 2026</span>
+            <span id="lastUpdated">Last Updated: 19th October 2026</span>
             
             <div id="policies">
                 <div id="left">
@@ -103,6 +103,7 @@
                         <li>Phone Number</li>
                         <li>Design files uploaded via the quote form</li>
                         <li>Order history and communication records</li>
+                        <li>Feedback survey responses (including your order number)</li>
                     </ul>
 
                     <span id="right1HowWeUseYourDataHeading">How We Use Your Data</span>
@@ -111,6 +112,7 @@
                         <li>Process and fulfil your order</li>
                         <li>Send you a quote and communicate about your order</li>
                         <li>Send a post-purchase review invitation via Trustpilot</li>
+                        <li>Send a single feedback survey email after your order is delivered, to help us improve our service</li>
                         <li>Provide order tracking updates</li>
                         <li>Respond to enquiries</li>
                         <li>Comply with legal obligations</li>
@@ -122,7 +124,7 @@
                     <ul id="right1LegalBasisForProcessingList">
                         <li>Contract — to fulfil your order</li>
                         <li>Legal obligation — to comply with UK law</li>
-                        <li>Legitimate interests — to manage and improve our service</li>
+                        <li>Legitimate interests — to manage and improve our service, including asking for feedback on your order</li>
                     </ul>
 
                     <span id="right1DataSharingHeading">Data Sharing</span>
@@ -132,6 +134,7 @@
                         <li>Shipping management platforms (Packlink PRO), to generate and manage shipping labels</li>
                         <li>Payment processors (Stripe), to handle transactions securely</li>
                         <li>Review platforms (Trustpilot), to send a post-purchase review invitation email after your order is completed</li>
+                        <li>Survey platforms (Tally), to collect and store feedback survey responses</li>
                     </ul>
                     <span id="right1DataSharingDescription2">We do not share your data with any other third parties.</span>
 

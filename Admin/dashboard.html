@@ -29,6 +29,11 @@
 
         <div id="content">
             <div id="orderDiv">
+                <div id="pageBtns">
+                    <button class="selectedPage" onclick="window.location.href = '/Admin/dashboard.html'">Dashboard</button>
+                    <button class="unselectedPage" onclick="window.location.href = '/Admin/Tracker/'">Tracker</button>
+                </div>
+
                 <div id="filterBtns">
                     <button onclick="filter('orders')" class="selectedFilter" id="filterOrders">Orders</button>
                     <button onclick="filter('otherOrders')" class="unSelectedFilter" id="filterOtherOrders">Other Orders</button>
