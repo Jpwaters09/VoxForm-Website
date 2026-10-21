@@ -26,7 +26,8 @@ $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $income = $pdo->query("SELECT * FROM Income ORDER BY order_date DESC")->fetchAll(PDO::FETCH_ASSOC);
+$expenses = $pdo->query("SELECT * FROM Expenses ORDER BY expense_date DESC")->fetchAll(PDO::FETCH_ASSOC);
 
 $paidMonths = $pdo->query("SELECT * FROM `Paid Months` ORDER BY paid_at DESC")->fetchAll(PDO::FETCH_ASSOC);
 
-echo json_encode([$income, $paidMonths]);
+echo json_encode([$income, $expenses, $paidMonths]);

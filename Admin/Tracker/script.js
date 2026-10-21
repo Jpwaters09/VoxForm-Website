@@ -2,6 +2,7 @@ let currentUser = null;
 let isManager = null;
 let lastMonthStart;
 let currentIncomeId = null;
+let currentExpenseId = null;
 
 async function init() {
     const res = await fetch('../login.php');
@@ -32,9 +33,12 @@ async function loadIncome() {
     const data = await res.json();
 
     let income = data[0];
-    let paidMonths = data[1];
+    let expenses = data[1];
+    let paidMonths = data[2];
 
     let incomeTableBody = document.getElementById("incomeTableBody");
+    let expenseTableBody = document.getElementById("expenseTableBody");
+
     let logPaymentsBtn = document.getElementById("logPaymentsBtn");
 
     let receiving = document.getElementById("receiving");
@@ -95,6 +99,75 @@ async function loadIncome() {
     let mtToJc = 0;
     let jcToJw = 0;
     let jcToMt = 0;
+
+    expenses.forEach(e => {
+        let tr = document.createElement("tr");
+        expenseTableBody.appendChild(tr);
+
+        let expenseId = document.createElement("td");
+        let description = document.createElement("td");
+        let category = document.createElement("td");
+        let createdBy = document.createElement("td");
+        let amount = document.createElement("td");
+        let expenseDate = document.createElement("td");
+
+        tr.appendChild(expenseId);
+        tr.appendChild(description);
+        tr.appendChild(category);
+        tr.appendChild(createdBy);
+        tr.appendChild(amount);
+        tr.appendChild(expenseDate);
+
+        tr.onclick = () => addExpense(e.id, e.description, e.category, parseFloat(e.amount_pence / 100), e.expense_date);
+
+        expenseId.textContent = e.id;
+        description.textContent = e.description;
+        category.textContent = e.category;
+        createdBy.textContent = e.created_by;
+        amount.textContent = formatPrice.format(parseFloat(e.amount_pence / 100));
+        expenseDate.textContent = new Date(e.expense_date).toLocaleDateString('en-CA');
+
+        let expenseDay = e.expense_date.slice(0, 10);
+        let inProfit = (expenseDay >= profitStart && expenseDay < profitEnd) ? 1 : 0;
+        let inPay = (expenseDay >= payStart && expenseDay < payEnd) ? 1 : 0;
+
+        let amount1 = parseInt(e.amount_pence);
+        let partnerShare = Math.floor(amount1 / 3);
+        let payerShare = amount1 - partnerShare * 2;
+
+        if (e.created_by == "Jacob Waters") {
+            jwProfit -= payerShare * inProfit;
+            mtProfit -= partnerShare * inProfit;
+            jcProfit -= partnerShare * inProfit;
+
+            mtToJw += partnerShare * inPay;
+            jcToJw += partnerShare * inPay;
+
+            jwRecv += partnerShare * 2 * inPay;
+        }
+
+        else if (e.created_by == "Matthew Taylor") {
+            mtProfit -= payerShare * inProfit;
+            jwProfit -= partnerShare * inProfit;
+            jcProfit -= partnerShare * inProfit;
+
+            jwToMt += partnerShare * inPay;
+            jcToMt += partnerShare * inPay;
+
+            mtRecv += partnerShare * 2 * inPay;
+        }
+
+        else if (e.created_by == "James Colley") {
+            jcProfit -= payerShare * inProfit;
+            jwProfit -= partnerShare * inProfit;
+            mtProfit -= partnerShare * inProfit;
+
+            jwToJc += partnerShare * inPay;
+            mtToJc += partnerShare * inPay;
+
+            jcRecv += partnerShare * 2 * inPay;
+        }
+    });
 
     income.forEach(i => {
         let tr = document.createElement("tr");
@@ -337,7 +410,7 @@ function addIncome(incomeId = null, reference = null, description = null, tookBy
     }
 
     else {
-        incomePopupProfit.innerHTML = `Profit: <strong>£0.00</strong>`;
+        incomePopupProfit.innerHTML = 'Profit: <strong>£-.--</strong>';
     }
     itemPriceInput.value = price;
     shippingPriceInput.value = shippingPrice;
@@ -347,6 +420,34 @@ function addIncome(incomeId = null, reference = null, description = null, tookBy
 
     dim.style.display = "";
     incomePopup.style.display = "";
+}
+
+function addExpense(expenseId = null, description = null, category = "", amount = null, expenseDate = null) {
+    let expensePopup = document.getElementById("expensePopup");
+    let dim = document.getElementById("dim");
+
+    let descriptionInput = document.getElementById("descriptionInput1");
+    let categorySelect = document.getElementById("categorySelect");
+    let expenseAmountInput = document.getElementById("expenseAmountInput");
+    let expenseDateInput = document.getElementById("expenseDateInput");
+
+    currentExpenseId = expenseId;
+
+    if (expenseId) {
+        document.getElementById("deleteExpenseBtn").style.display = "";
+    }
+
+    else {
+        document.getElementById("deleteExpenseBtn").style.display = "none";
+    }
+
+    descriptionInput.value = description;
+    categorySelect.value = category;
+    expenseAmountInput.value = amount;
+    expenseDateInput.value = expenseDate;
+
+    dim.style.display = "";
+    expensePopup.style.display = "";
 }
 
 async function logIncome1() {
@@ -361,7 +462,7 @@ async function logIncome1() {
     let orderTypeSelect = document.getElementById("orderTypeSelect").value;
     let orderDateInput = document.getElementById("orderDateInput").value;
 
-    if (!referenceInput || !descriptionInput || !tookBySelect || !printedBySelect || !channelSelect || !itemPriceInput || !shippingPriceInput || !costsPriceInput || !orderTypeSelect || !orderDateInput) {
+    if (!referenceInput || !descriptionInput || !tookBySelect || !printedBySelect || !channelSelect || isNaN(itemPriceInput) || isNaN(shippingPriceInput) || isNaN(costsPriceInput) || !orderTypeSelect || !orderDateInput) {
         alert("Please fill in all fields.");
         
         return;
@@ -401,6 +502,44 @@ async function logIncome1() {
     }
 }
 
+async function logExpense1() {
+    let descriptionInput = document.getElementById("descriptionInput1").value;
+    let categorySelect = document.getElementById("categorySelect").value;
+    let expenseAmountInput = parseFloat(document.getElementById("expenseAmountInput").value);
+    let expenseDateInput = document.getElementById("expenseDateInput").value;
+
+    if (!descriptionInput || !categorySelect || !expenseAmountInput || !expenseDateInput) {
+        alert("Please fill in all fields.");
+        
+        return;
+    }
+
+    const formData = new FormData();
+
+    formData.append("id", currentExpenseId);
+    formData.append("created_by", currentUser.username);
+    formData.append("description", descriptionInput);
+    formData.append("category", categorySelect);
+    formData.append("amount", parseInt(expenseAmountInput * 100));
+    formData.append("expense_date", expenseDateInput);
+
+    const response = await fetch("../logExpense.php", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        cancelLogExpense();
+        updateIncome();
+    }
+
+    else {
+        alert("Error saving income log. Please try again.");
+    }
+}
+
 async function deleteLogIncome() {
     const res = await fetch('../deleteIncome.php', {
         method: 'POST',
@@ -420,6 +559,25 @@ async function deleteLogIncome() {
     }
 }
 
+async function deleteLogExpense() {
+    const res = await fetch('../deleteExpense.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({currentExpenseId})
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+        cancelLogExpense();
+        updateIncome();
+    }
+
+    else {
+        alert("Error deleting expense log. Please try again.")
+    }
+}
+
 function profitInputChanged() {
     let itemPriceInput = parseFloat(document.getElementById("itemPriceInput").value);
     let shippingPriceInput = parseFloat(document.getElementById("shippingPriceInput").value);
@@ -428,7 +586,13 @@ function profitInputChanged() {
 
     let profit = formatPrice.format(itemPriceInput - (shippingPriceInput + costsPriceInput));
 
-    incomePopupProfit.innerHTML = `Profit: <strong>${profit}</strong>`;
+    if (profit != "£NaN") {
+        incomePopupProfit.innerHTML = `Profit: <strong>${profit}</strong>`;
+    }
+
+    else {
+        incomePopupProfit.innerHTML = 'Profit: <strong>£-.--</strong>';
+    }
 }
 
 function logIncome() {
@@ -479,6 +643,8 @@ function cancelLog() {
 
 function updateIncome() {
     document.getElementById("incomeTableBody").innerHTML = "";
+    document.getElementById("expenseTableBody").innerHTML = "";
+
     loadIncome();
 }
 
@@ -490,4 +656,52 @@ function cancelLogIncome() {
     incomePopup.style.display = "none";
 
     currentIncomeId = null;
+}
+
+function cancelLogExpense() {
+    let expensePopup = document.getElementById("expensePopup");
+    let dim = document.getElementById("dim");
+
+    dim.style.display = "none";
+    expensePopup.style.display = "none";
+
+    currentExpenseId = null;
+}
+
+function filter(type) {
+    let incomeListDiv = document.getElementById("incomeListDiv");
+    let expenseListDiv = document.getElementById("expenseListDiv");
+    let filterIncome = document.getElementById("filterIncome");
+    let filterExpenses = document.getElementById("filterExpenses");
+    let addBtn = document.getElementById("addBtn");
+
+    if (type == "income") {
+        incomeListDiv.style.display = "";
+        expenseListDiv.style.display = "none";
+
+        filterIncome.classList.remove("unSelectedFilter");
+        filterIncome.classList.add("selectedFilter");
+
+        filterExpenses.classList.add("unSelectedFilter");
+        filterExpenses.classList.remove("selectedFilter");
+
+        addBtn.innerText = "Log Income";
+        addBtn.onclick = () => addIncome();
+    }
+
+    if (type == "expenses") {
+        incomeListDiv.style.display = "none";
+        expenseListDiv.style.display = "";
+
+        filterExpenses.classList.remove("unSelectedFilter");
+        filterExpenses.classList.add("selectedFilter");
+
+        filterIncome.classList.add("unSelectedFilter");
+        filterIncome.classList.remove("selectedFilter");
+
+        addBtn.innerText = "Log Expense";
+        addBtn.onclick = () => addExpense();
+    }
+
+    updateIncome();
 }
