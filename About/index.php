@@ -38,6 +38,7 @@
                         "https://jpwaters09.com",
                         "https://github.com/jpwaters09",
                         "https://x.com/jpwaters09",
+                        "https://instagram.com/jpwaters09"
                         "https://patreon.com/jpwaters09",
                         "https://reddit.com/u/jpwaters09",
                         "https://linkedin.com/in/jpwaters09"
@@ -91,6 +92,7 @@
                         <a href="mailto:contact@jpwaters09.com"><img src="/Assets/Images/Mail.svg" alt="Mail"></a>
                         <a target="_blank" href="https://github.com/jpwaters09"><img src="/Assets/Images/Github.svg" alt="GitHub"></a>
                         <a target="_blank" href="https://x.com/jpwaters09"><img src="/Assets/Images/X.svg" alt="X"></a>
+                        <a target="_blank" href="https://instagram.com/jpwaters09"><img src="/Assets/Images/Instagram.svg" alt="Instagram"></a>
                         <a target="_blank" href="https://patreon.com/jpwaters09"><img src="/Assets/Images/Patreon.svg" alt="Patreon"></a>
                         <a target="_blank" href="https://reddit.com/u/jpwaters09"><img src="/Assets/Images/Reddit.svg" alt="Reddit"></a>
                         <a target="_blank" href="https://linkedin.com/in/jpwaters09"><img src="/Assets/Images/LinkedIn.svg" alt="LinkedIn"></a>
