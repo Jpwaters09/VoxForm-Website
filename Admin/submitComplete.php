@@ -79,6 +79,14 @@ function sendDiscordNotification($order_id, $pdo) {
 
 sendDiscordNotification($orderId, $pdo);
 
+function hasOrderedBefore(PDO $pdo, string $email): bool
+{
+    $stmt = $pdo->prepare("SELECT EXISTS(SELECT 1 FROM Orders WHERE email = ? AND status = 'Completed')");
+    $stmt->execute([$email]);
+
+    return (bool) $stmt->fetchColumn();
+}
+
 $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->Host = $_ENV['EMAIL_HOST'];
@@ -92,15 +100,6 @@ $mail->setFrom($_ENV['EMAIL_USERNAME_NOREPLY'], 'VoxForm No-Reply');
 $mail->addAddress($order['email']);
 $mail->addReplyTo($_ENV['EMAIL_USERNAME_CONTACT']);
 
-$structuredData = '
-<script type="application/json+trustpilot">
-{
-"recipientName": "' . htmlspecialchars($order['name']) . '",
-"recipientEmail": "' . htmlspecialchars($order['email']) . '",
-"referenceId": "' . htmlspecialchars($order['order_id']) . '"
-}
-</script>';
-
 $html = file_get_contents('/home/www/public/Email Templates/submitComplete.html');
 
 $body = str_replace(
@@ -112,14 +111,30 @@ $body = str_replace(
     $html
 );
 
-$mail->Body = $body . $structuredData;
-$mail->addBCC($_ENV['EMAIL_TRUSTPILOT']);
+if (hasOrderedBefore($pdo, $order['email'])) {
+    $mail->Body = $body;
+}
+
+else {
+    $structuredData = '
+    <script type="application/json+trustpilot">
+    {
+    "recipientName": "' . htmlspecialchars($order['name']) . '",
+    "recipientEmail": "' . htmlspecialchars($order['email']) . '",
+    "referenceId": "' . htmlspecialchars($order['order_id']) . '"
+    }
+    </script>';
+
+    $mail->Body = $body . $structuredData;
+    $mail->addBCC($_ENV['EMAIL_TRUSTPILOT']);
+}
+
 $mail->isHTML(true);
 $mail->CharSet = 'UTF-8';
 $mail->Encoding = 'quoted-printable';
 $mail->Subject = "Your VoxForm Order #{$orderId} Has Been Delivered";
 $mail->AltBody = strip_tags($body);
-
+    
 $mail->sign(
     '/home/www/Email Certificate/certificate.crt',
     '/home/www/Email Certificate/private.key',

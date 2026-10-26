@@ -26,7 +26,7 @@ $pass = $_ENV['DB_PASS'];
 $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$orders = $pdo->query("SELECT order_id, name, email FROM Orders WHERE status = 'Completed' AND delivered_at <= NOW() - INTERVAL 1 DAY AND delivered_at >= NOW() - INTERVAL 7 DAY AND survey_sent_at IS NULL")->fetchAll(PDO::FETCH_ASSOC);
+$orders = $pdo->query("SELECT o.order_id, o.name, o.email FROM Orders o WHERE o.status = 'Completed' AND o.delivered_at <= NOW() - INTERVAL 1 DAY AND o.delivered_at >= NOW() - INTERVAL 7 DAY AND o.survey_sent_at IS NULL AND NOT EXISTS(SELECT 1 FROM Orders o2 WHERE o2.email = o.email AND o2.order_id <> o.order_id)")->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($orders as $o) {
     $link = $surveyBase . '?order_id=' . urlencode($o['order_id']) . '&email=' . urlencode($o['email']);
