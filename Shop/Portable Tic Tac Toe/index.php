@@ -189,7 +189,7 @@
                         <input type="text" id="postcodeInput" placeholder="Postcode">
 
                         <span id="countryHeading">Country</span>
-                        <input type="text" id="countryInput" placeholder="County">
+                        <input type="text" id="countryInput" placeholder="Country">
                     </div>
                 </div>
 

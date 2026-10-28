@@ -140,7 +140,7 @@ Note: We print your files as supplied and don't offer modelling or design change
                     <input type="text" id="postcodeInput" placeholder="Postcode">
 
                     <span id="countryHeading">Country</span>
-                    <input type="text" id="countryInput" placeholder="County">
+                    <input type="text" id="countryInput" placeholder="Country">
                     
                     <div id="socialMediaBox">
                         <input type="checkbox" id="socialMediaConsent">

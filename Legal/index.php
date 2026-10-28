@@ -24,7 +24,7 @@
 
         <div id="content">
             <h1 id="heading">Legal & Policies</h1>
-            <span id="lastUpdated">Last Updated: 19th October 2026</span>
+            <span id="lastUpdated">Last Updated: 28th October 2026</span>
             
             <div id="policies">
                 <div id="left">
@@ -130,7 +130,7 @@
                     <span id="right1DataSharingHeading">Data Sharing</span>
                     <span id="right1DataSharingDescription">We may share your data with:</span>
                     <ul id="right1DataSharingList">
-                        <li>Shipping carriers (Royal Mail and InPost), solely for the purpose of delivering your order</li>
+                        <li>Shipping carriers (Royal Mail and Yodel), solely for the purpose of delivering your order</li>
                         <li>Shipping management platforms (Packlink PRO), to generate and manage shipping labels</li>
                         <li>Payment processors (Stripe), to handle transactions securely</li>
                         <li>Review platforms (Trustpilot), to send a post-purchase review invitation email after your order is completed</li>
