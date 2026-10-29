@@ -66,7 +66,7 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 80%;
+        max-height: 80%;
         overflow-x: hidden;
     }
 

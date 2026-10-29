@@ -118,7 +118,7 @@ async function loadIncome() {
         tr.appendChild(amount);
         tr.appendChild(expenseDate);
 
-        tr.onclick = () => addExpense(e.id, e.description, e.category, parseFloat(e.amount_pence / 100), e.expense_date);
+        tr.onclick = () => addExpense(e.id, e.description, e.category, parseFloat(e.amount_pence / 100), new Date(e.expense_date).toLocaleDateString('en-CA'));
 
         expenseId.textContent = e.id;
         description.textContent = e.description;
@@ -478,10 +478,10 @@ async function logIncome1() {
     formData.append("took_by", tookBySelect);
     formData.append("printed_by", printedBySelect);
     formData.append("channel", channelSelect);
-    formData.append("item_price", parseInt(itemPriceInput * 100));
-    formData.append("shipping_price", parseInt(shippingPriceInput * 100));
-    formData.append("costs_price", parseInt(costsPriceInput * 100));
-    formData.append("profit", parseInt(profit * 100));
+    formData.append("item_price", parseInt(Math.round(itemPriceInput * 100)));
+    formData.append("shipping_price", parseInt(Math.round(shippingPriceInput * 100)));
+    formData.append("costs_price", parseInt(Math.round(costsPriceInput * 100)));
+    formData.append("profit", parseInt(Math.round(profit * 100)));
     formData.append("order_type", orderTypeSelect);
     formData.append("order_date", orderDateInput);
 
@@ -520,7 +520,7 @@ async function logExpense1() {
     formData.append("created_by", currentUser.username);
     formData.append("description", descriptionInput);
     formData.append("category", categorySelect);
-    formData.append("amount", parseInt(expenseAmountInput * 100));
+    formData.append("amount", parseInt(Math.round(expenseAmountInput * 100)));
     formData.append("expense_date", expenseDateInput);
 
     const response = await fetch("../logExpense.php", {
