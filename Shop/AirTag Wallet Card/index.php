@@ -47,7 +47,7 @@
 
         <div id="content">
             <div id="images">
-                <img id="productImage" src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
+                <img id="productImage" src="/Assets/Images/Product/AirTag Wallet Card/Image 1.webp" alt="AirTag Wallet Card">
                 <div id="imageSelector">
                     <img onclick="leftBtnClick()" id="leftBtn" src="/Assets/Images/Back.svg" alt="Left">
                     
