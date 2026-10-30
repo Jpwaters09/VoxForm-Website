@@ -142,10 +142,18 @@
                 <div id="carousel">
                     <div id="carouselTrack">
                         <div class="productCard">
+                            <img class="productImage" src="/Assets/Images/Product/AirTag Wallet Card/Image 1.webp" alt="AirTag Wallet Card">
+                            <span class="productTitle">AirTag Wallet Card</span>
+                            <span class="productDescription">A slim, credit card-sized holder that snaps your AirTag in securely.</span>
+                            <span class="productPrice">£4.99</span>
+                            <button class="orderBtn" onclick="window.location.href = '/Shop/AirTag%20Wallet%20Card/'">Order</button>
+                        </div>
+
+                        <div class="productCard">
                             <img class="productImage" src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
                             <span class="productTitle">Dart Holder</span>
                             <span class="productDescription">A simple holder perfect for keeping a full set of darts organised and ready to throw.</span>
-                            <span class="productPrice">Free Quote</span>
+                            <span class="productPrice">£6.49</span>
                             <button class="orderBtn" onclick="window.location.href = '/Shop/Dart%20Holder/'">Order</button>
                         </div>
 
@@ -153,7 +161,7 @@
                             <img class="productImage" src="/Assets/Images/Product/Plant Pot Label/Image 1.webp" alt="Plant Pot Label">
                             <span class="productTitle">Plant Pot Label</span>
                             <span class="productDescription">A plant pot label available in 3 different styles, personalised with your own text.</span>
-                            <span class="productPrice">Free Quote</span>
+                            <span class="productPrice">£2.49</span>
                             <button class="orderBtn" onclick="window.location.href = '/Shop/Plant%20Pot%20Label/'">Order</button>
                         </div>
 
@@ -161,7 +169,7 @@
                             <img class="productImage" src="/Assets/Images/Product/Portable Tic Tac Toe/Image 1.webp" alt="Portable Tic Tac Toe">
                             <span class="productTitle">Portable Tic Tac Toe</span>
                             <span class="productDescription">A simple portable game perfect for enjoying Tic Tac Toe on the go.</span>
-                            <span class="productPrice">Free Quote</span>
+                            <span class="productPrice">£5.99</span>
                             <button class="orderBtn" onclick="window.location.href = '/Shop/Portable%20Tic%20Tac%20Toe/'">Order</button>
                         </div>
 
@@ -169,7 +177,7 @@
                             <img class="productImage" src="/Assets/Images/Product/USB Stick Holder/Image 1.webp" alt="USB Stick Holder">
                             <span class="productTitle">USB Stick Holder</span>
                             <span class="productDescription">A simple holder perfect for keeping up to 6 USB sticks organised and within reach.</span>
-                            <span class="productPrice">Free Quote</span>
+                            <span class="productPrice">£4.49</span>
                             <button class="orderBtn" onclick="window.location.href = '/Shop/USB%20Stick%20Holder/'">Order</button>
                         </div>
                     </div>

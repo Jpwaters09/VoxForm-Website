@@ -27,28 +27,34 @@
             <h1 id="subheading">Browse our catalogue</h1>
 
             <div id="productsCard">
+                <div onclick="window.location.href = '/Shop/AirTag%20Wallet%20Card/'">
+                    <img src="/Assets/Images/Product/AirTag Wallet Card/Image 1.webp" alt="AirTag Wallet Card">
+                    <span class="productName">AirTag Wallet Card</span>
+                    <span class="productPrice">£4.99</span>
+                </div>
+
                 <div onclick="window.location.href = '/Shop/Dart%20Holder/'">
                     <img src="/Assets/Images/Product/Dart Holder/Image 1.webp" alt="Dart Holder">
                     <span class="productName">Dart Holder</span>
-                    <span class="productPrice">Free Quote</span>
+                    <span class="productPrice">£6.49</span>
                 </div>
 
                 <div onclick="window.location.href = '/Shop/Plant%20Pot%20Label/'">
                     <img src="/Assets/Images/Product/Plant Pot Label/Image 1.webp" alt="Plant Pot Label">
                     <span class="productName">Plant Pot Label</span>
-                    <span class="productPrice">Free Quote</span>
+                    <span class="productPrice">£2.49</span>
                 </div>
 
                 <div onclick="window.location.href = '/Shop/Portable%20Tic%20Tac%20Toe/'">
                     <img src="/Assets/Images/Product/Portable Tic Tac Toe/Image 1.webp" alt="Portable Tic Tac Toe">
                     <span class="productName">Portable Tic Tac Toe</span>
-                    <span class="productPrice">Free Quote</span>
+                    <span class="productPrice">£5.99</span>
                 </div>
 
                 <div onclick="window.location.href = '/Shop/USB%20Stick%20Holder/'">
                     <img src="/Assets/Images/Product/USB Stick Holder/Image 1.webp" alt="USB Stick Holder">
                     <span class="productName">USB Stick Holder</span>
-                    <span class="productPrice">Free Quote</span>
+                    <span class="productPrice">£4.49</span>
                 </div>
 
             </div>

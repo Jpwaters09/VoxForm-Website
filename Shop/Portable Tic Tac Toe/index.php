@@ -30,6 +30,14 @@
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://voxform.co.uk/Shop/Portable%20Tic%20Tac%20Toe/",
+                "priceCurrency": "GBP",
+                "price": "5.99",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition"
             }
         }
         </script>
@@ -51,7 +59,7 @@
             </div>
             <div id="info">
                 <span id="itemTitle">Portable Tic Tac Toe</span>
-                <span id="itemPrice">Free Quote</span>
+                <span id="itemPrice">£5.99</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">
                     A simple portable game perfect for enjoying Tic Tac Toe on the go.

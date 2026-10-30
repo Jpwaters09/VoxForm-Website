@@ -30,6 +30,14 @@
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://voxform.co.uk/Shop/Plant%20Pot%20Label/",
+                "priceCurrency": "GBP",
+                "price": "2.49",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition"
             }
         }
         </script>
@@ -50,7 +58,7 @@
             </div>
             <div id="info">
                 <span id="itemTitle">Plant Pot Label</span>
-                <span id="itemPrice">Free Quote</span>
+                <span id="itemPrice">£2.49</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">
                     A plant pot label available in 3 different styles, personalised with your own text.

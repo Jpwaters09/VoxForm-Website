@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="AirTag Wallet Card | VoxForm">
-        <meta property="og:description" content="Slim, credit card-sized holder that snaps your AirTag in securely.">
+        <meta property="og:description" content="A slim, credit card-sized holder that snaps your AirTag in securely.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp">
         <meta property="og:url" content="https://voxform.co.uk/Shop/Dart%20Holder/">
         <meta property="og:type" content="product">
@@ -26,7 +26,7 @@
             "@type": "Product",
             "name": "3D Printed Dart Holder",
             "image": "https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp",
-            "description": "Slim, credit card-sized holder that snaps your AirTag in securely.",
+            "description": "A slim, credit card-sized holder that snaps your AirTag in securely.",
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
