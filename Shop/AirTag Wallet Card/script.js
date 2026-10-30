@@ -65,7 +65,7 @@ function rightBtnClick() {
         image4Btn.style.color = "#8ba4bc";
         productImage.src = "/Assets/Images/Product/AirTag Wallet Card/Image 3.webp";
         productImage.alt = "Dart Holder";
-        selectedImage = 2;
+        selectedImage = 3;
     }
 
     else if (selectedImage == 3) {
@@ -75,7 +75,7 @@ function rightBtnClick() {
         image4Btn.style.color = "#ffffff";
         productImage.src = "/Assets/Images/Product/AirTag Wallet Card/Image 4.webp";
         productImage.alt = "Dart Holder";
-        selectedImage = 2;
+        selectedImage = 4;
     }
 }
 

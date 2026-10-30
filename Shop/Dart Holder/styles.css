@@ -147,6 +147,7 @@ html, body {
 #info {
     display: flex;
     flex-direction: column;
+    max-width: 45%;
 }
 
 #itemTitle {
@@ -296,7 +297,6 @@ html, body {
     border-radius: 10px;
     margin-bottom: 40px;
     font-weight: 400;
-    max-width: 40%;
 }
 
 #orderBtn {

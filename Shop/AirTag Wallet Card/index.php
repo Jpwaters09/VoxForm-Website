@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Shop/Dart Holder/styles.css">
+        <link rel="stylesheet" href="/Shop/AirTag Wallet Card/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
-        <script src="/Shop/Dart Holder/script.js"></script>
+        <script src="/Shop/AirTag Wallet Card/script.js"></script>
         <link rel="canonical" href="https://voxform.co.uk/Shop/AirTag%20Wallet%20Card/">
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
@@ -24,7 +24,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "3D Printed Dart Holder",
+            "name": "3D Printed AirTag Wallet Card",
             "image": "https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp",
             "description": "A slim, credit card-sized holder that snaps your AirTag in securely.",
             "brand": {
