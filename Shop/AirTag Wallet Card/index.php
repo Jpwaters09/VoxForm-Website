@@ -66,7 +66,7 @@
                 <h1 id="itemDescription">
                     Keep your AirTag with you without the bulk. This slim, credit card-sized holder fits neatly into any wallet or card slot, and your AirTag snaps in securely, with no glue or adhesive needed.
                     <br><br>
-                    It sits flush alongside your other cards. It's 3D printed in the UK by VoxForm, with an open crosshatch infill pattern that gives it a clean, technical look.
+                    It sits flush alongside your other cards. It has an open crosshatch infill pattern that gives it a clean, technical look.
                     <br><br>
                     AirTag not included.
                 </h1>
