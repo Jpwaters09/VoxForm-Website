@@ -59,6 +59,12 @@ html, body {
         height: 80%;
         overflow-x: hidden;
     }
+
+    #info {
+        display: flex;
+        flex-direction: column;
+        max-width: 45%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -93,6 +99,11 @@ html, body {
         align-items: center;
         overflow-y: auto;
         overflow-x: hidden;
+    }
+
+    #info {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -142,12 +153,6 @@ html, body {
     width: 400px;
     border-radius: 10px;
     -webkit-user-drag: none;
-}
-
-#info {
-    display: flex;
-    flex-direction: column;
-    max-width: 45%;
 }
 
 #itemTitle {

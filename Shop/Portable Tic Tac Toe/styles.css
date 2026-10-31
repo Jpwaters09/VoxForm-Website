@@ -64,6 +64,12 @@ html, body {
         flex-direction: row;
         gap: 60px;
     }
+
+    #info {
+        display: flex;
+        flex-direction: column;
+        max-width: 45%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -104,6 +110,11 @@ html, body {
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    #info {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -153,12 +164,6 @@ html, body {
     width: 400px;
     border-radius: 10px;
     -webkit-user-drag: none;
-}
-
-#info {
-    display: flex;
-    flex-direction: column;
-    max-width: 45%;
 }
 
 #itemTitle {
