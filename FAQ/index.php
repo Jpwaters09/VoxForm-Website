@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="FAQ | VoxForm">
-        <meta property="og:description" content="Frequently Asked Questions.">
+        <meta name="description" content="Find answers about VoxForm's 3D printing service, including accepted files, materials, colours, turnaround times and UK delivery.">
+        <meta property="og:description" content="Find answers about VoxForm's 3D printing service, including accepted files, materials, colours, turnaround times and UK delivery.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/FAQ/">
         <meta property="og:type" content="website">

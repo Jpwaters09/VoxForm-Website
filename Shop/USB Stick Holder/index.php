@@ -11,14 +11,15 @@
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="USB Stick Holder | VoxForm">
-        <meta property="og:description" content="A simple holder perfect for keeping up to 6 USB sticks organised and within reach.">
+        <meta property="og:title" content="3D Printed USB Stick Holder | VoxForm">
+        <meta name="description" content="Keep up to six USB sticks organised and within reach with VoxForm's 3D printed USB stick holder. A practical desk accessory.">
+        <meta property="og:description" content="Keep up to six USB sticks organised and within reach with VoxForm's 3D printed USB stick holder. A practical desk accessory.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/USB%20Stick%20Holder/Image%201.webp">
         <meta property="og:url" content="https://voxform.co.uk/Shop/USB%20Stick%20Holder/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/USB%20Stick%20Holder/Image%201.webp">
-        <title>USB Stick Holder | VoxForm</title>
+        <title>3D Printed USB Stick Holder | VoxForm</title>
 
         <script type="application/ld+json">
         {

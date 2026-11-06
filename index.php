@@ -31,20 +31,20 @@
         <link rel="stylesheet" href="/Home/styles.css">
         <link rel="shortcut icon" href="/Assets/Images/Icon.png" type="image/png">
         <script src="/Home/script.js"></script>
-        <meta name="description" content="Custom 3D printing on demand across the UK. Upload your design and we'll handle the rest - fast turnaround, quality prints.">
+        <meta name="description" content="Upload your model for a custom 3D printing quote or shop ready-made designs with UK production and delivery.">
         <link rel="canonical" href="https://voxform.co.uk/">
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:site_name" content="VoxForm">
-        <meta property="og:title" content="VoxForm | Custom 3D Printing UK">
-        <meta property="og:description" content="Custom 3D printing on demand across the UK. Upload your design and we'll handle the rest - fast turnaround, quality prints.">
+        <meta property="og:title" content="VoxForm | Custom 3D Printing Services UK">
+        <meta property="og:description" content="Upload your model for a custom 3D printing quote or shop ready-made designs with UK production and delivery.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
-        <title>VoxForm | Custom 3D Printing UK</title>
+        <title>VoxForm | Custom 3D Printing Services UK</title>
 
         <script type="application/ld+json">
         {
@@ -59,7 +59,7 @@
         {
             "@context": "https://schema.org",
             "@type": "SiteNavigationElement",
-            "name": ["Home", "About", "Shop", "Services", "Quote", "FAQ", "Contact"],
+            "name": ["Home", "About", "Shop", "Services", "Quote", "FAQ", "Contact", "Legal"],
             "url": [
                 "https://voxform.co.uk/",
                 "https://voxform.co.uk/About/",
@@ -67,7 +67,8 @@
                 "https://voxform.co.uk/Services/",
                 "https://voxform.co.uk/Quote/",
                 "https://voxform.co.uk/FAQ/",
-                "https://voxform.co.uk/Contact/"
+                "https://voxform.co.uk/Contact/",
+                "https://voxform.co.uk/Legal/"
             ]
         }
         </script>
@@ -79,7 +80,7 @@
             "name": "VoxForm",
             "url": "https://voxform.co.uk",
             "logo": "https://voxform.co.uk/Assets/Images/VoxForm-Logo.png",
-            "description": "Custom 3D printing service in the UK. Upload your model and get a quote.",
+            "description": "Upload your model for a custom 3D printing quote or shop ready-made designs with UK production and delivery.",
             "email": "contact@voxform.co.uk",
             "areaServed": {
                 "@type": "Country",

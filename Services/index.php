@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Services | VoxForm">
-        <meta property="og:description" content="Our Services.">
+        <meta name="description" content="Explore VoxForm's UK 3D printing services. Upload your model for a custom print, or choose from our range of ready-made designs.">
+        <meta property="og:description" content="Explore VoxForm's UK 3D printing services. Upload your model for a custom print, or choose from our range of ready-made designs.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Services/">
         <meta property="og:type" content="website">
@@ -31,7 +32,7 @@
                 <div id="whatWeDoCard1">
                     <span id="whatWeDoCard1Title">Custom 3D Prints</span>
 
-                    <span id="whatWeDoCard1Description">Custom 3D Prints Got a design in mind? Send us your file and we'll bring it to life. We accept STL, OBJ, STP/STEP, ZIP (for multiple models), and 3MF files, with fast turnaround and consistent quality.</span>
+                    <span id="whatWeDoCard1Description">Got a design in mind? Send us your file and we'll bring it to life. We accept STL, OBJ, STP/STEP, ZIP (for multiple models), and 3MF files, with fast turnaround and consistent quality.</span>
                 </div>
 
                 <div id="whatWeDoCard2">

@@ -11,20 +11,21 @@
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="Portable Tic Tac Toe | VoxForm">
-        <meta property="og:description" content="A simple portable game perfect for enjoying Tic Tac Toe on the go.">
+        <meta property="og:title" content="Portable 3D Printed Tic Tac Toe Game | VoxForm">
+        <meta name="description" content="Enjoy a game on the go with VoxForm's portable 3D printed tic tac toe set. A compact game for everyday fun.">
+        <meta property="og:description" content="Enjoy a game on the go with VoxForm's portable 3D printed tic tac toe set. A compact game for everyday fun.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Portable%20Tic%20Tac%20Toe/Image%201.webp">
         <meta property="og:url" content="https://voxform.co.uk/Shop/Portable%20Tic%20Tac%20Toe/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/Portable%20Tic%20Tac%20Toe/Image%201.webp">
-        <title>Portable Tic Tac Toe | VoxForm</title>
+        <title>Portable 3D Printed Tic Tac Toe Game | VoxForm</title>
 
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "3D Printed Portable Tic Tac Toe",
+            "name": "3D Printed Portable Tic Tac Toe Game",
             "image": "https://voxform.co.uk/Assets/Images/Product/Portable%20Tic%20Tac%20Toe/Image%201.webp",
             "description": "A simple portable game perfect for enjoying Tic Tac Toe on the go.",
             "brand": {

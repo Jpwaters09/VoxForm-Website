@@ -11,14 +11,15 @@
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="Dart Holder | VoxForm">
-        <meta property="og:description" content="A simple holder perfect for keeping a full set of darts organised and ready to throw.">
+        <meta property="og:title" content="3D Printed Dart Holder | VoxForm">
+        <meta name="description" content="Keep your darts organised with VoxForm's 3D printed dart holder. A simple holder for a full set of darts.">
+        <meta property="og:description" content="Keep your darts organised with VoxForm's 3D printed dart holder. A simple holder for a full set of darts.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp">
         <meta property="og:url" content="https://voxform.co.uk/Shop/Dart%20Holder/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/Dart%20Holder/Image%201.webp">
-        <title>Dart Holder | VoxForm</title>
+        <title>3D Printed Dart Holder | VoxForm</title>
 
         <script type="application/ld+json">
         {

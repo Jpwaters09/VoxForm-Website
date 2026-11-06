@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="About | VoxForm">
-        <meta property="og:description" content="VoxForm was born out of a shared passion for 3D printing. Two friends, one idea — to take something we love and make it accessible to anyone who needs it, no printer required.">
+        <meta name="description" content="Meet VoxForm, a Kent-based 3D printing service offering custom prints and ready-made designs.">
+        <meta property="og:description" content="Meet VoxForm, a Kent-based 3D printing service offering custom prints and ready-made designs.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/About/">
         <meta property="og:type" content="website">

@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Quote | VoxForm">
-        <meta property="og:description" content="Get a free quote for your custom 3D printing project. Upload your model file and we'll get back to you with a price.">
+        <meta name="description" content="Get a custom 3D printing quote from VoxForm. Upload your model, choose your material and colour, and receive a personalised price within 48 hours.">
+        <meta property="og:description" content="Get a custom 3D printing quote from VoxForm. Upload your model, choose your material and colour, and receive a personalised price within 48 hours.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Quote/">
         <meta property="og:type" content="website">
@@ -30,7 +31,7 @@
                 "name": "VoxForm",
                 "url": "https://voxform.co.uk"
             },
-            "description": "Get a free quote for your custom 3D printing project. Upload your model file and we'll get back to you with a price.",
+            "description": "Get a custom 3D printing quote from VoxForm. Upload your model, choose your material and colour, and receive a personalised price within 48 hours.",
             "areaServed": "GB",
             "url": "https://voxform.co.uk/Quote",
             "serviceType": "3D Printing"

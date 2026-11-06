@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Shop | VoxForm">
-        <meta property="og:description" content="Browse our catalogue.">
+        <meta property="og:description" content="Browse ready-made 3D printed products from VoxForm.">
+        <meta name="description" content="Browse ready-made 3D printed products from VoxForm.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Shop/">
         <meta property="og:type" content="website">

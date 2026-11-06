@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Contact | VoxForm">
-        <meta property="og:description" content="Have a question or need some help? Get in touch and we'll get back to you as soon as possible.">
+        <meta name="description" content="Contact VoxForm about custom 3D printing, ready-made products or an existing order. Get help with your model, material choices and UK delivery.">
+        <meta property="og:description" content="Contact VoxForm about custom 3D printing, ready-made products or an existing order. Get help with your model, material choices and UK delivery.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Contact/">
         <meta property="og:type" content="website">

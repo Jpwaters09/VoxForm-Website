@@ -11,20 +11,21 @@
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="Plant Pot Label | VoxForm">
-        <meta property="og:description" content="A plant pot label available in 3 different styles, personalised with your own text.">
+        <meta property="og:title" content="Personalised Plant Pot Labels | VoxForm">
+        <meta name="description" content="Personalise your plant pots with 3D printed labels from VoxForm. Choose from three styles and add your own text.">
+        <meta property="og:description" content="Personalise your plant pots with 3D printed labels from VoxForm. Choose from three styles and add your own text.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/Plant%20Pot%20Label/Image%201.webp">
         <meta property="og:url" content="https://voxform.co.uk/Shop/Plant%20Pot%20Label/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/Plant%20Pot%20Label/Image%201.webp">
-        <title>Plant Pot Label | VoxForm</title>
+        <title>Personalised Plant Pot Labels | VoxForm</title>
 
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "3D Printed Plant Pot Label",
+            "name": "Personalised Plant Pot Labels",
             "image": "https://voxform.co.uk/Assets/Images/Product/Plant%20Pot%20Label/Image%201.webp",
             "description": "A plant pot label available in 3 different styles, personalised with your own text.",
             "brand": {

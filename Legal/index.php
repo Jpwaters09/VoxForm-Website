@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <meta property="og:title" content="Legal | VoxForm">
-        <meta property="og:description" content="Legal & Policies.">
+        <meta name="description" content="Read VoxForm's terms and conditions, privacy policy, and returns and refunds policy for custom 3D printing orders and ready-made products.">
+        <meta property="og:description" content="Read VoxForm's terms and conditions, privacy policy, and returns and refunds policy for custom 3D printing orders and ready-made products.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/VoxForm-Logo.png">
         <meta property="og:url" content="https://voxform.co.uk/Legal/">
         <meta property="og:type" content="website">
