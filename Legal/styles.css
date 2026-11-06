@@ -147,7 +147,7 @@ html, body {
     margin-bottom: 20px;
 }
 
-#right1WhoWeAreHeading, #right1WhatDataWeCollectHeading, #right1HowWeUseYourDataHeading, #right1LegalBasisForProcessingHeading, #right1DataSharingHeading, #right1DataRetentionHeading, #right1YourRightsHeading, #right1CookiesHeading, #right1ChangesToThisPolicyHeading {
+#right1WhoWeAreHeading, #right1WhatDataWeCollectHeading, #right1HowWeUseYourDataHeading, #right1LegalBasisForProcessingHeading, #right1DataSharingHeading, #right1DataRetentionHeading, #right1YourRightsHeading, #right1CookiesHeading, #right1ChangesToThisPolicyHeading, #right1InternationalTransfersHeading {
     color: var(--text-primary);
     font-size: 18px;
     margin-bottom: 5px;
@@ -165,19 +165,19 @@ html, body {
     margin-bottom: 40px;
 }
 
-#right1WhatDataWeCollectDescription, #right1HowWeUseYourDataDescription, #right1LegalBasisForProcessingDescription, #right1DataSharingDescription, #right1YourRightsDescription, #left1ProhibitedModelsDescription {
+#right1WhatDataWeCollectDescription, #right1HowWeUseYourDataDescription, #right1LegalBasisForProcessingDescription, #right1DataSharingDescription, #right1YourRightsDescription, #left1ProhibitedModelsDescription, #right1InternationalTransfersDescription {
     color: var(--text-secondary);
     font-size: 16px;
 }
 
-#right1WhoWeAreDescription a, #right1YourRightsDescription2 a, #left2IncorrectOrdersDescription a {
+#right1WhoWeAreDescription a, #right1YourRightsDescription2 a, #left2IncorrectOrdersDescription a, #right1InternationalTransfersDescription a {
     color: var(--cyan);
     font-size: 16px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-#right1WhoWeAreDescription a:hover, #right1YourRightsDescription2 a:hover, #left2IncorrectOrdersDescription a:hover {
+#right1WhoWeAreDescription a:hover, #right1YourRightsDescription2 a:hover, #left2IncorrectOrdersDescription a:hover, #right1InternationalTransfersDescription a:hover {
     color: var(--purple);
 }
 

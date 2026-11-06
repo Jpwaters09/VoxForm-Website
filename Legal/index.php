@@ -32,7 +32,7 @@
 
         <div id="content">
             <h1 id="heading">Legal & Policies</h1>
-            <span id="lastUpdated">Last Updated: 28th October 2026</span>
+            <span id="lastUpdated">Last Updated: 6th November 2026</span>
             
             <div id="policies">
                 <div id="left">
@@ -112,6 +112,7 @@
                         <li>Design files uploaded via the quote form</li>
                         <li>Order history and communication records</li>
                         <li>Feedback survey responses (including your order number)</li>
+                        <li>Website usage information collected through Google Analytics, including pages visited, website interactions, referring websites, browser and device information, and cookie identifiers</li>
                     </ul>
 
                     <span id="right1HowWeUseYourDataHeading">How We Use Your Data</span>
@@ -121,6 +122,7 @@
                         <li>Send you a quote and communicate about your order</li>
                         <li>Send a post-purchase review invitation via Trustpilot</li>
                         <li>Send a single feedback survey email after your order is delivered, to help us improve our service</li>
+                        <li>Produce aggregate statistics about website usage to improve our content, navigation and website performance</li>
                         <li>Provide order tracking updates</li>
                         <li>Respond to enquiries</li>
                         <li>Comply with legal obligations</li>
@@ -132,7 +134,7 @@
                     <ul id="right1LegalBasisForProcessingList">
                         <li>Contract — to fulfil your order</li>
                         <li>Legal obligation — to comply with UK law</li>
-                        <li>Legitimate interests — to manage and improve our service, including asking for feedback on your order</li>
+                        <li>Legitimate interests — to manage and improve our service, including requesting feedback on completed orders, and to produce aggregate website usage statistics that help us improve our website</li>
                     </ul>
 
                     <span id="right1DataSharingHeading">Data Sharing</span>
@@ -143,8 +145,18 @@
                         <li>Payment processors (Stripe), to handle transactions securely</li>
                         <li>Review platforms (Trustpilot), to send a post-purchase review invitation email after your order is completed</li>
                         <li>Survey platforms (Tally), to collect and store feedback survey responses</li>
+                        <li>Google, as our website analytics provider, to process website usage information on our behalf and help us improve our website</li>
                     </ul>
-                    <span id="right1DataSharingDescription2">We do not share your data with any other third parties.</span>
+                    <span id="right1DataSharingDescription2">We share personal data with the service providers described in this policy where necessary for the stated purposes, and where required by law.</span>
+
+                    <span id="right1InternationalTransfersHeading">International Transfers</span>
+                    <span id="right1InternationalTransfersDescription">
+                        Google may process information collected through Google Analytics on servers outside the United Kingdom, including in the United States.
+                        <br><br>
+                        Google states that it uses recognised legal mechanisms for international data transfers, including the UK Extension to the EU-US Data Privacy Framework for eligible transfers to Google LLC, and standard contractual clauses where required.
+                        <br><br>
+                        Further information is available in <a href="https://policies.google.com/privacy/frameworks" target="_blank">Google's explanation of its data transfer safeguards</a>. You can contact us at <a href="mailto:contact@voxform.co.uk">contact@voxform.co.uk</a> with questions about our use of Google Analytics.
+                    </span>
 
                     <span id="right1DataRetentionHeading">Data Retention</span>
                     <span id="right1DataRetentionDescription">We retain your personal data for as long as necessary to fulfil your order and comply with legal obligations. Order records are typically retained for 6 years in line with UK tax law. Design files are deleted within 90 days of order completion unless you request otherwise.</span>
@@ -161,7 +173,11 @@
                     <span id="right1YourRightsDescription2">To exercise any of these rights, contact us at <a href="mailto:contact@voxform.co.uk">contact@voxform.co.uk</a>. To contact the ICO directly, visit <a href="https://ico.org.uk/" target="_blank">https://ico.org.uk</a> or call 0303 123 1113</span>
 
                     <span id="right1CookiesHeading">Cookies</span>
-                    <span id="right1CookiesDescription">This website does not use cookies for tracking, analytics, advertising, or profiling purposes. Where cookies or similar technologies are used by third-party services integrated into the website, they will be used in accordance with the relevant service's privacy and cookie policies and, where required, with your consent.</span>
+                    <span id="right1CookiesDescription">
+                        We use Google Analytics to understand how visitors use the VoxForm website and produce statistics that help us improve it. Analytics uses cookies and similar technologies to collect website usage information.
+                        <br><br>
+                        We use this information solely to improve our website, not for advertising, remarketing or profiling individual visitors. We rely on the statistical purposes exception under the UK Privacy and Electronic Communications Regulations for this use.
+                    </span>
 
                     <span id="right1ChangesToThisPolicyHeading">Changes to This Policy</span>
                     <span id="right1ChangesToThisPolicyDescription">We may update this policy from time to time. The date at the top of this page reflects the most recent update. We encourage you to review this policy periodically. Continued use of our website after changes are made does not constitute consent to the processing of your personal data — our legal basis for processing remains as described above.</span>
