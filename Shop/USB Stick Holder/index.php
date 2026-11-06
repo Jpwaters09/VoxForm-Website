@@ -42,13 +42,14 @@
             }
         }
         </script>
+
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MWNT596J"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        </script>
     </head>
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MWNT596J"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    </script>
     <body>
         <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
 

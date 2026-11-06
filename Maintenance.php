@@ -12,6 +12,13 @@
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
         <title>Site Under Maintenance | VoxForm</title>
+
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MWNT596J"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        </script>
     </head>
     <body>
        <div id="header"><?php include $_SERVER['DOCUMENT_ROOT'] . '/Header/index.html'; ?></div>
