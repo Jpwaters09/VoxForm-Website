@@ -15,7 +15,7 @@
         <meta name="description" content="Keep your AirTag securely in your wallet with VoxForm's slim, credit card-sized holder. Snap-in fitting with no adhesive needed. AirTag not included.">
         <meta property="og:description" content="Keep your AirTag securely in your wallet with VoxForm's slim, credit card-sized holder. Snap-in fitting with no adhesive needed. AirTag not included.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp">
-        <meta property="og:url" content="https://voxform.co.uk/Shop/Dart%20Holder/">
+        <meta property="og:url" content="https://voxform.co.uk/Shop/AirTag%20Wallet%20Card/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp">
