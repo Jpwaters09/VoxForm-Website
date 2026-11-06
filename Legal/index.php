@@ -170,7 +170,7 @@
                         <li>Object to or restrict processing of your data</li>
                         <li>Lodge a complaint with the Information Commissioner's Office (ICO)</li>
                     </ul>
-                    <span id="right1YourRightsDescription2">To exercise any of these rights, contact us at <a href="mailto:contact@voxform.co.uk">contact@voxform.co.uk</a>. To contact the ICO directly, visit <a href="https://ico.org.uk/" target="_blank">https://ico.org.uk</a> or call 0303 123 1113</span>
+                    <span id="right1YourRightsDescription2">To exercise any of these rights, contact us at <a href="mailto:contact@voxform.co.uk">contact@voxform.co.uk</a>. To contact the ICO directly, visit <a href="https://ico.org.uk/" target="_blank">https://ico.org.uk</a> or call <a href="tel:03031231113">0303 123 1113</a></span>
 
                     <span id="right1CookiesHeading">Cookies</span>
                     <span id="right1CookiesDescription">

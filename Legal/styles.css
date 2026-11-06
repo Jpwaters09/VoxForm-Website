@@ -153,7 +153,7 @@ html, body {
     margin-bottom: 5px;
 }
 
-#right1WhoWeAreDescription, #right1HowWeUseYourDataDescription2, #right1DataSharingDescription2, #right1DataRetentionDescription, #right1YourRightsDescription2, #right1CookiesDescription, #right1WhatDataWeCollectList, #right1HowWeUseYourDataList, #right1LegalBasisForProcessingList, #right1DataSharingList, #right1YourRightsList, #left1ProhibitedModelsList {
+#right1WhoWeAreDescription, #right1HowWeUseYourDataDescription2, #right1DataSharingDescription2, #right1DataRetentionDescription, #right1YourRightsDescription2, #right1CookiesDescription, #right1WhatDataWeCollectList, #right1HowWeUseYourDataList, #right1LegalBasisForProcessingList, #right1DataSharingList, #right1YourRightsList, #left1ProhibitedModelsList, #right1InternationalTransfersDescription {
     color: var(--text-secondary);
     font-size: 16px;
     margin-bottom: 20px;
@@ -165,7 +165,7 @@ html, body {
     margin-bottom: 40px;
 }
 
-#right1WhatDataWeCollectDescription, #right1HowWeUseYourDataDescription, #right1LegalBasisForProcessingDescription, #right1DataSharingDescription, #right1YourRightsDescription, #left1ProhibitedModelsDescription, #right1InternationalTransfersDescription {
+#right1WhatDataWeCollectDescription, #right1HowWeUseYourDataDescription, #right1LegalBasisForProcessingDescription, #right1DataSharingDescription, #right1YourRightsDescription, #left1ProhibitedModelsDescription {
     color: var(--text-secondary);
     font-size: 16px;
 }
