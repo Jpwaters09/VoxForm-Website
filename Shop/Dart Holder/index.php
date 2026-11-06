@@ -31,6 +31,14 @@
             "brand": {
                 "@type": "Brand",
                 "name": "VoxForm"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://voxform.co.uk/Shop/Dart%20Holder/",
+                "priceCurrency": "GBP",
+                "price": "6.49",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition"
             }
         }
         </script>
@@ -52,7 +60,7 @@
             </div>
             <div id="info">
                 <span id="itemTitle">Dart Holder</span>
-                <span id="itemPrice">Free Quote</span>
+                <span id="itemPrice">£6.49</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">
                     A simple holder perfect for keeping a full set of darts organised and ready to throw.
