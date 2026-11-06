@@ -39,7 +39,7 @@
                         "https://jpwaters09.com",
                         "https://github.com/jpwaters09",
                         "https://x.com/jpwaters09",
-                        "https://instagram.com/jpwaters09"
+                        "https://instagram.com/jpwaters09",
                         "https://patreon.com/jpwaters09",
                         "https://reddit.com/u/jpwaters09",
                         "https://linkedin.com/in/jpwaters09"
