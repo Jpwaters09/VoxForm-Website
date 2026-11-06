@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">USB Stick Holder</span>
+                <span id="itemTitle">3D Printed USB Stick Holder</span>
                 <span id="itemPrice">£4.49</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">

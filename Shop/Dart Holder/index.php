@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">Dart Holder</span>
+                <span id="itemTitle">3D Printed Dart Holder</span>
                 <span id="itemPrice">£6.49</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">

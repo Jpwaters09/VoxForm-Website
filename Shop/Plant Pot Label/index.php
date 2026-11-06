@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">Plant Pot Label</span>
+                <span id="itemTitle">Personalised Plant Pot Labels</span>
                 <span id="itemPrice">£2.49</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">

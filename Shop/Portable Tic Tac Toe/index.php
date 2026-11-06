@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">Portable Tic Tac Toe</span>
+                <span id="itemTitle">3D Printed Portable Tic Tac Toe Game</span>
                 <span id="itemPrice">£5.99</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">

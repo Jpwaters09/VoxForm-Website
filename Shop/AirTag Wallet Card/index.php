@@ -11,14 +11,15 @@
         <link rel="stylesheet" href="/Header/styles.css">
         <link rel="stylesheet" href="/Footer/styles.css">
         <script src="/Header/script.js" defer></script>
-        <meta property="og:title" content="AirTag Wallet Card | VoxForm">
-        <meta property="og:description" content="A slim, credit card-sized holder that snaps your AirTag in securely.">
+        <meta property="og:title" content="3D Printed AirTag Wallet Card | VoxForm">
+        <meta name="description" content="Keep your AirTag securely in your wallet with VoxForm's slim, credit card-sized holder. Snap-in fitting with no adhesive needed. AirTag not included.">
+        <meta property="og:description" content="Keep your AirTag securely in your wallet with VoxForm's slim, credit card-sized holder. Snap-in fitting with no adhesive needed. AirTag not included.">
         <meta property="og:image" content="https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp">
         <meta property="og:url" content="https://voxform.co.uk/Shop/Dart%20Holder/">
         <meta property="og:type" content="product">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://voxform.co.uk/Assets/Images/Product/AirTag%20Wallet%20Card/Image%201.webp">
-        <title>AirTag Wallet Card | VoxForm</title>
+        <title>3D Printed AirTag Wallet Card | VoxForm</title>
 
         <script type="application/ld+json">
         {
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div id="info">
-                <span id="itemTitle">AirTag Wallet Card</span>
+                <span id="itemTitle">3D Printed AirTag Wallet Card</span>
                 <span id="itemPrice">£4.99</span>
                 <span id="descriptionText">Description</span>
                 <h1 id="itemDescription">
